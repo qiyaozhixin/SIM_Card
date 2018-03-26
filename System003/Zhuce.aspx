@@ -9,4 +9,5 @@
         </WizardSteps>
     </asp:CreateUserWizard>
     <asp:Button ID="Button7" runat="server" Text="TEST" />
+    <asp:Button ID="Button8" runat="server" Text="TEST2" />
 </asp:Content>
