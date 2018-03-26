@@ -8,4 +8,5 @@
             <asp:CompleteWizardStep runat="server" />
         </WizardSteps>
     </asp:CreateUserWizard>
+    <asp:Button ID="Button7" runat="server" Text="TEST" />
 </asp:Content>
