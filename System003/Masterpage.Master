@@ -1,0 +1,50 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Masterpage.master.cs" Inherits="System003.Masterpage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link href="Styles/Site.css" rel="stylesheet" type="text/css" />
+    <style type="text/css">
+        .auto-style1 {
+            width: 300px;
+        }
+        .auto-style2 {
+            width: 300px;
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div class="header">
+        <div style="text-align:left; position: relative;" class="auto-style1">
+            <asp:Image ID="Image1" runat="server" ImageUrl="~/Image/1.jpg" />
+        </div>
+        <div style="text-align:center; font-family: 等线; font-size: 40px; color: #FF0000; position: relative; right: 0px; top: -50px; clip: rect(auto, auto, auto, auto); left: 600px;" aria-disabled="False" class="auto-style2">
+        电话卡销售系统
+        </div>
+    </div>
+    <div class="navigation">
+        <asp:Button ID="Button1" runat="server" PostBackUrl="~/Diaobo.aspx" Text="调拨" />
+        <asp:Button ID="Button2" runat="server" PostBackUrl="~/Chaxun.aspx" Text="查询" />
+        <asp:Button ID="Button3" runat="server" PostBackUrl="~/Baobiao.aspx" Text="报表" />
+        <asp:Button ID="Button4" runat="server" PostBackUrl="~/Kaika.aspx" Text="开卡" />
+        <asp:Button ID="Button6" runat="server" PostBackUrl="~/Zhuce.aspx" Text="注册" />
+        <asp:Button ID="Button5" runat="server" PostBackUrl="~/Denglu.aspx" Text="登录" />
+    </div>
+    <div class="content">
+        <asp:ContentPlaceHolder ID="ContentPlaceHolderMain" runat="server">
+        </asp:ContentPlaceHolder>
+    </div>
+        <div class="bottom">
+            <div style="text-align:center; position: relative; bottom: -400px;">
+        Copyright©1999-2018  中国联通  版权所有
+            </div>
+    </div>
+    </form>
+</body>
+</html>
