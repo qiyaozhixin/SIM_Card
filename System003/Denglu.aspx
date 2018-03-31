@@ -4,4 +4,5 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolderMain" runat="server">
     <asp:Login ID="Login1" runat="server">
     </asp:Login>
+    <asp:Button ID="Button7" runat="server" PostBackUrl="~/Test.aspx" Text="LoginTest" />
 </asp:Content>
