@@ -45,6 +45,7 @@
         Copyright©1999-2018  中国联通  版权所有
             </div>
     </div>
+        <asp:LoginName ID="LoginName1" runat="server" />
     </form>
 </body>
 </html>
