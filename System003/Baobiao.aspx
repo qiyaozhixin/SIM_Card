@@ -2,6 +2,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolderMain" runat="server">
-    <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
-    <asp:Label ID="Label2" runat="server" Text="Label"></asp:Label>
+    <asp:GridView ID="GridView1" runat="server">
+    </asp:GridView>
+    <asp:Button ID="Button7" runat="server" OnClick="Button7_Click" Text="查询" />
 </asp:Content>
