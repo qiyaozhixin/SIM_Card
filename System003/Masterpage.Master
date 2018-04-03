@@ -18,7 +18,7 @@
         }
     </style>
 </head>
-<body>
+<body style="background-image: url('/Image/grey.jpg')">
     <form id="form1" runat="server">
     <div class="header">
         <div style="text-align:left; position: relative;" class="auto-style1">
@@ -46,6 +46,10 @@
             </div>
     </div>
         <asp:LoginName ID="LoginName1" runat="server" />
+
+    <div style="background-image:url('/Image/grey.jpg')">
+
+    </div>
     </form>
 </body>
 </html>
