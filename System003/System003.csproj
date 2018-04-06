@@ -118,6 +118,7 @@
     <Content Include="Scripts\jquery-1.9.0.js" />
     <Content Include="Scripts\jquery-1.9.0.min.js" />
     <Content Include="Test.aspx" />
+    <Content Include="Testcombobox.aspx" />
     <Content Include="Zhuce.aspx" />
     <Content Include="Scripts\jquery-1.9.0.min.map" />
     <None Include="Web.Debug.config">
@@ -198,6 +199,13 @@
     </Compile>
     <Compile Include="Test.aspx.designer.cs">
       <DependentUpon>Test.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Testcombobox.aspx.cs">
+      <DependentUpon>Testcombobox.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Testcombobox.aspx.designer.cs">
+      <DependentUpon>Testcombobox.aspx</DependentUpon>
     </Compile>
     <Compile Include="Zhuce.aspx.cs">
       <DependentUpon>Zhuce.aspx</DependentUpon>
