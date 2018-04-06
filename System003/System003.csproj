@@ -102,6 +102,8 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Denglu.aspx" />
+    <Content Include="Diaobo2.aspx" />
+    <Content Include="Diaobo3.aspx" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Image\BtnCancel.gif" />
     <Content Include="Image\BtnDelete.gif" />
@@ -181,6 +183,20 @@
     </Compile>
     <Compile Include="Diaobo.aspx.designer.cs">
       <DependentUpon>Diaobo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Diaobo2.aspx.cs">
+      <DependentUpon>Diaobo2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Diaobo2.aspx.designer.cs">
+      <DependentUpon>Diaobo2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Diaobo3.aspx.cs">
+      <DependentUpon>Diaobo3.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Diaobo3.aspx.designer.cs">
+      <DependentUpon>Diaobo3.aspx</DependentUpon>
     </Compile>
     <Compile Include="Kaika.aspx.cs">
       <DependentUpon>Kaika.aspx</DependentUpon>

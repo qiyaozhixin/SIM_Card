@@ -6,4 +6,5 @@
     <asp:Button ID="Button8" runat="server" Text="地推网点" OnClick="Button8_Click" />
     <asp:GridView ID="GridView1" runat="server">
     </asp:GridView>
+    <asp:Button ID="Button9" runat="server" OnClick="Button9_Click" PostBackUrl="~/Diaobo2.aspx" Text="下一步" />
 </asp:Content>

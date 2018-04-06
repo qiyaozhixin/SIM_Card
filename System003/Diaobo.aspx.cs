@@ -13,7 +13,7 @@ namespace System003
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-/*            try
+            try
             {
                 SqlConnection sqlcon = new SqlConnection("server=PC-201401242045;database=aspnetdb;uid=sa;pwd=ppzsppzs;");//创建数据库连接对象
                                                                                                                           //创建SqlCommand对象
@@ -33,7 +33,7 @@ namespace System003
             {
 
             }
-*/
+
         }
 
         protected void Button7_Click(object sender, EventArgs e)
@@ -82,6 +82,11 @@ namespace System003
             {
 
             }
+        }
+
+        protected void Button9_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }
