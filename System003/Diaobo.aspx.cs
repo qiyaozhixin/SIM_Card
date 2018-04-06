@@ -96,7 +96,10 @@ namespace System003
                 if (cbox.Checked == true)
                 {
                     string str = GridView1.Rows[i].Cells[0].Text;//获取想要的行
-                    //Session["str"] = str;//记录获取的行，以便传值
+                    //Session["str"] = GridView1.Rows[i].Cells[0].Text;//记录获取的行，以便传值
+                    //Response.Redirect(str);
+                    //Label1.Text = Request.QueryString["str"];
+                    Label1.Text = str;
                 }
             }
         }

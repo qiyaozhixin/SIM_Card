@@ -5,4 +5,5 @@
     <asp:GridView ID="GridView1" runat="server">
     </asp:GridView>
     <asp:Button ID="Button7" runat="server" PostBackUrl="~/Diaobo.aspx" Text="确定" />
+    <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
 </asp:Content>
