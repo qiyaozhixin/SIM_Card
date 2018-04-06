@@ -35,15 +35,24 @@
                             onclientclick="return confirm('确定删除吗？');" />
                     </ItemTemplate>
                 </asp:TemplateField>
+                <asp:TemplateField HeaderText="选择">
+                    <ItemTemplate>
+                        <asp:CheckBox ID="CheckBox1" runat="server" />
+                    </ItemTemplate>
+                </asp:TemplateField>
             </Columns>
             <FooterStyle BackColor="White" ForeColor="#333333" />
             <PagerStyle BackColor="#336666" ForeColor="White" HorizontalAlign="Center" />
             <SelectedRowStyle BackColor="#339966" Font-Bold="True" ForeColor="White" />
             <HeaderStyle BackColor="#336666" Font-Bold="True" ForeColor="White" />
         </asp:GridView>
+        <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Test" />
         <br />
     
     </div>
+        <p>
+            <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
+        </p>
     </form>
 </body>
 </html>

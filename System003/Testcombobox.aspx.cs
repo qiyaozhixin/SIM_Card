@@ -135,5 +135,20 @@ namespace System003
             GridView1.PageIndex = e.NewPageIndex;
             BindData();//数据绑定
         }
+
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            for (int i = 0; i <= GridView1.Rows.Count - 1; i++)
+            {
+                CheckBox cbox = (CheckBox)GridView1.Rows[i].FindControl("CheckBox1");
+                if (cbox.Checked == true)
+                {
+                    string str = GridView1.Rows[i].Cells[0].Text;//获取想要的行
+                    //Session["str"] = str;//记录获取的行，以便传值
+                    Label1.Text = str;
+                }
+            }
+        }
     }
 }
