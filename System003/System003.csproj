@@ -103,6 +103,10 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Denglu.aspx" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Image\BtnCancel.gif" />
+    <Content Include="Image\BtnDelete.gif" />
+    <Content Include="Image\BtnSave.gif" />
+    <Content Include="Image\BtnUpdate.gif" />
     <Content Include="Image\grey.jpg" />
     <Content Include="packages.config" />
     <Content Include="ApplicationInsights.config">
