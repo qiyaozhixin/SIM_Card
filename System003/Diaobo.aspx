@@ -16,6 +16,6 @@
                 </asp:TemplateField>
         </Columns>
     </asp:GridView>
-    <asp:Button ID="Button9" runat="server" OnClick="Button9_Click" Text="下一步" />
-    <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
+    <asp:Button ID="Button9" runat="server" OnClick="Button9_Click" Text="下一步" PostBackUrl="~/Diaobo2.aspx" />
+    <asp:Button ID="Button10" runat="server" OnClick="Button10_Click" Text="Test" />
 </asp:Content>
