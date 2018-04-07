@@ -103,15 +103,16 @@ namespace System003
                     //Label1.Text = str;
 
 
-                    //SqlConnection sqlcon = new SqlConnection("server=PC-201401242045;database=aspnetdb;uid=sa;pwd=ppzsppzs;");//创建数据库连接对象
-                    //if (sqlcon.State == ConnectionState.Closed)     //判断连接是否关闭
-                    //{
-                    //    sqlcon.Open();                              //打开数据库连接
-                    //}
-                    //SqlCommand sqlcmd = new SqlCommand("insert into aspnet_Linshiyuangong values(' werwerwer ')", sqlcon);
-                    //SqlDataReader sqldr = sqlcmd.ExecuteReader();
-                    //sqldr.Close();//关闭SqlDataReader对象
-                    //sqlcon.Close();//关闭数据库连接
+                    SqlConnection sqlcon = new SqlConnection("server=PC-201401242045;database=aspnetdb;uid=sa;pwd=ppzsppzs;");//创建数据库连接对象
+                    if (sqlcon.State == ConnectionState.Closed)     //判断连接是否关闭
+                    {
+                        sqlcon.Open();                              //打开数据库连接
+                    }
+                    SqlCommand sqlcmd = new SqlCommand("insert into aspnet_Linshiyuangong values('" + GridView1.Rows[i].Cells[0].Text + "')", sqlcon);
+                    SqlDataReader sqldr = sqlcmd.ExecuteReader();
+                    sqldr.Close();//关闭SqlDataReader对象
+                    sqlcon.Close();//关闭数据库连接
+                    //Response.Redirect("Diaobo2.aspx");
                 }
             }
         }
