@@ -2,8 +2,10 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolderMain" runat="server">
-    <asp:GridView ID="GridView1" runat="server">
-    </asp:GridView>
-    <asp:Button ID="Button7" runat="server" PostBackUrl="~/Diaobo.aspx" Text="确定" />
-    <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
-</asp:Content>
+    <asp:Button ID="Button7" runat="server" Text="确定" OnClick="Button7_Click" />
+    <br />
+    <asp:Label ID="Label2" runat="server" Text="员工OA:"></asp:Label>
+    <asp:Label ID="Label1" runat="server"></asp:Label>
+    <br />
+    <asp:Label ID="Label3" runat="server" Text="ICCID:"></asp:Label>
+    </asp:Content>
