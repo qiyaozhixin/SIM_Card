@@ -6,9 +6,9 @@
     <asp:Button ID="Button8" runat="server" Text="地推网点" OnClick="Button8_Click" />
     <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" PageSize="5">
         <Columns>
-                <asp:BoundField DataField="OA" HeaderText="OA" ReadOnly="True" />
+                <asp:BoundField DataField="员工OA" HeaderText="员工OA" ReadOnly="True" />
                 <asp:BoundField DataField="ERP编号" HeaderText="ERP编号" />
-                <asp:BoundField DataField="部门" HeaderText="部门" />
+                <asp:BoundField DataField="所在部门" HeaderText="所在部门" />
                 <asp:TemplateField HeaderText="选择">
                     <ItemTemplate>
                         <asp:CheckBox ID="CheckBox1" runat="server" />

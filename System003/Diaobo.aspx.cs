@@ -35,7 +35,7 @@ namespace System003
             //设置GridView控件的数据源为创建的数据集ds
             GridView1.DataSource = ds;
             //将数据库表中的主键字段放入GridView控件的DataKeyNames属性中
-            GridView1.DataKeyNames = new string[] { "OA" };
+            GridView1.DataKeyNames = new string[] { "员工OA" };
             //绑定数据库表中数据
             GridView1.DataBind();
         }
