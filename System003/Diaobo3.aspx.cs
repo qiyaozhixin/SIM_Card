@@ -45,6 +45,8 @@ namespace System003
                 sqldr.Dispose();
                 sqldr.Close();//关闭SqlDataReader对象
                 sqlcon.Close();//关闭数据库连接
+
+                Label6.Text = DateTime.Now.ToLocalTime().ToString();
             }
             catch
             {
