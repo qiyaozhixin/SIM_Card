@@ -97,12 +97,6 @@ namespace System003
                 if (cbox.Checked == true)
                 {
                     string str = GridView1.Rows[i].Cells[0].Text;//获取想要的行
-                    //Session["str"] = GridView1.Rows[i].Cells[0].Text;//记录获取的行，以便传值
-                    //Response.Redirect(str);
-                    //Label1.Text = Request.QueryString["str"];
-                    //Label1.Text = str;
-
-
                     SqlConnection sqlcon = new SqlConnection("server=PC-201401242045;database=aspnetdb;uid=sa;pwd=ppzsppzs;");//创建数据库连接对象
                     if (sqlcon.State == ConnectionState.Closed)     //判断连接是否关闭
                     {
@@ -116,22 +110,5 @@ namespace System003
                 }
             }
         }
-
-        //protected void Button10_Click(object sender, EventArgs e)
-        //{
-        //    SqlConnection sqlcon = new SqlConnection("server=PC-201401242045;database=aspnetdb;uid=sa;pwd=ppzsppzs;");//创建数据库连接对象
-        //    if (sqlcon.State == ConnectionState.Closed)     //判断连接是否关闭
-        //    {
-        //        sqlcon.Open();                              //打开数据库连接
-        //    }
-        //    //SqlCommand sqlcmd = new SqlCommand("insert into aspnet_Linshiyuangong values(' werwerwer ')", sqlcon);
-        //    //SqlCommand sqlcmd = new SqlCommand("delete from aspnet_Linshiyuangong", sqlcon);
-        //    SqlCommand sqlcmd = new SqlCommand("insert into aspnet_Linshiyuangong values(' werwerwer ')", sqlcon);
-        //    SqlDataReader sqldr = sqlcmd.ExecuteReader();
-        //    sqldr.Close();//关闭SqlDataReader对象
-        //    sqlcon.Close();//关闭数据库连接
-
-        //    Response.Redirect("Diaobo2.aspx");
-        //}
     }
 }
