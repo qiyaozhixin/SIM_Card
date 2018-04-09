@@ -57,9 +57,9 @@ namespace System003
                     SqlDataReader sqldr = sqlcmd.ExecuteReader();
                     sqldr.Close();//关闭SqlDataReader对象
                     sqlcon.Close();//关闭数据库连接
-                    Response.Redirect("Diaobo3.aspx");
                 }
             }
+            Response.Redirect("Diaobo3.aspx");
         }
     }
 }

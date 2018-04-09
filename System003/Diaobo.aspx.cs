@@ -102,7 +102,7 @@ namespace System003
                     {
                         sqlcon.Open();                              //打开数据库连接
                     }
-                    SqlCommand sqlcmd = new SqlCommand("insert into aspnet_Linshiyuangong values('" + GridView1.Rows[i].Cells[0].Text + "')", sqlcon);
+                    SqlCommand sqlcmd = new SqlCommand("insert into aspnet_Kuwei values('" + GridView1.Rows[i].Cells[0].Text + "')", sqlcon);
                     SqlDataReader sqldr = sqlcmd.ExecuteReader();
                     sqldr.Close();//关闭SqlDataReader对象
                     sqlcon.Close();//关闭数据库连接
