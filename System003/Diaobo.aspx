@@ -16,5 +16,7 @@
                 </asp:TemplateField>
         </Columns>
     </asp:GridView>
+    <asp:Label ID="Label3" runat="server" Text="注意：只能选择一名员工!"></asp:Label>
+    <br />
     <asp:Button ID="Button9" runat="server" OnClick="Button9_Click" Text="下一步" />
     </asp:Content>

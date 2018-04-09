@@ -90,7 +90,7 @@ namespace System003
 
         protected void Button9_Click(object sender, EventArgs e)
         {
-            
+            int check = 0;
             for (int i = 0; i <= GridView1.Rows.Count - 1; i++)
             {
                 CheckBox cbox = (CheckBox)GridView1.Rows[i].FindControl("CheckBox1");
@@ -102,12 +102,20 @@ namespace System003
                     {
                         sqlcon.Open();                              //打开数据库连接
                     }
-                    SqlCommand sqlcmd = new SqlCommand("insert into aspnet_Kuwei values('" + GridView1.Rows[i].Cells[0].Text + "')", sqlcon);
+                    SqlCommand sqlcmd = new SqlCommand("delete from aspnet_Kuwei;insert into aspnet_Kuwei values('" + GridView1.Rows[i].Cells[0].Text + "')", sqlcon);
                     SqlDataReader sqldr = sqlcmd.ExecuteReader();
                     sqldr.Close();//关闭SqlDataReader对象
                     sqlcon.Close();//关闭数据库连接
-                    Response.Redirect("Diaobo2.aspx");
+                    check++;
                 }
+            }
+            if (check == 1)
+            {
+                Response.Redirect("Diaobo2.aspx");
+            }
+            else
+            {
+                Response.Write("<script>window.alert('只能选择一名员工，请重新选择！');location.href='Diaobo.aspx';</script>");
             }
         }
     }
