@@ -35,6 +35,7 @@
         <asp:Button ID="Button4" runat="server" PostBackUrl="~/Kaika.aspx" Text="开卡" />
         <asp:Button ID="Button6" runat="server" PostBackUrl="~/Zhuce.aspx" Text="注册" />
         <asp:Button ID="Button5" runat="server" PostBackUrl="~/Denglu.aspx" Text="登录" />
+        <asp:Button ID="Button7" runat="server" PostBackUrl="~/Wode.aspx" Text="我的" />
     </div>
     <div class="content">
         <asp:ContentPlaceHolder ID="ContentPlaceHolderMain" runat="server">

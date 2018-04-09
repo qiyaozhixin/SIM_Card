@@ -124,6 +124,9 @@
     <Content Include="Scripts\jquery-1.9.0.js" />
     <Content Include="Scripts\jquery-1.9.0.min.js" />
     <Content Include="Test.aspx" />
+    <Content Include="Wode.aspx" />
+    <Content Include="Wodedenglu.aspx" />
+    <Content Include="Wodezhuce.aspx" />
     <Content Include="Zhuce.aspx" />
     <Content Include="Scripts\jquery-1.9.0.min.map" />
     <None Include="Web.Debug.config">
@@ -218,6 +221,27 @@
     </Compile>
     <Compile Include="Test.aspx.designer.cs">
       <DependentUpon>Test.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Wode.aspx.cs">
+      <DependentUpon>Wode.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Wode.aspx.designer.cs">
+      <DependentUpon>Wode.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Wodedenglu.aspx.cs">
+      <DependentUpon>Wodedenglu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Wodedenglu.aspx.designer.cs">
+      <DependentUpon>Wodedenglu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Wodezhuce.aspx.cs">
+      <DependentUpon>Wodezhuce.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Wodezhuce.aspx.designer.cs">
+      <DependentUpon>Wodezhuce.aspx</DependentUpon>
     </Compile>
     <Compile Include="Zhuce.aspx.cs">
       <DependentUpon>Zhuce.aspx</DependentUpon>
