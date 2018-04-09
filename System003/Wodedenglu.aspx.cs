@@ -42,7 +42,7 @@ namespace System003
             }
             else
             {
-                Response.Write("<script>window.alert('登陆失败，请检查密码是否正确！');location.href='Wodedenglu.aspx';</script>");
+                Response.Write("<script>window.alert('登陆失败，请检查OA及密码输入是否正确！');location.href='Wodedenglu.aspx';</script>");
             }
             sqlcon.Close();//关闭数据库连接
         }

@@ -101,7 +101,6 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
-    <Content Include="Denglu.aspx" />
     <Content Include="Diaobo2.aspx" />
     <Content Include="Diaobo3.aspx" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -127,7 +126,6 @@
     <Content Include="Wode.aspx" />
     <Content Include="Wodedenglu.aspx" />
     <Content Include="Wodezhuce.aspx" />
-    <Content Include="Zhuce.aspx" />
     <Content Include="Scripts\jquery-1.9.0.min.map" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -171,13 +169,6 @@
     </Compile>
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Denglu.aspx.cs">
-      <DependentUpon>Denglu.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Denglu.aspx.designer.cs">
-      <DependentUpon>Denglu.aspx</DependentUpon>
     </Compile>
     <Compile Include="Diaobo.aspx.cs">
       <DependentUpon>Diaobo.aspx</DependentUpon>
@@ -242,13 +233,6 @@
     </Compile>
     <Compile Include="Wodezhuce.aspx.designer.cs">
       <DependentUpon>Wodezhuce.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Zhuce.aspx.cs">
-      <DependentUpon>Zhuce.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Zhuce.aspx.designer.cs">
-      <DependentUpon>Zhuce.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <PropertyGroup>

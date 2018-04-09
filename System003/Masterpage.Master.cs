@@ -22,6 +22,7 @@ namespace System003
             //使用ExecuteReader方法的返回值创建SqlDataReader对象
             SqlDataReader sqldr = sqlcmd.ExecuteReader();
             Button8.Visible = false;
+            Label1.Visible = true;
             if (sqldr.Read())
             {
                 Label2.Text += sqldr[0];
@@ -29,7 +30,7 @@ namespace System003
             }
             else
             {
-                Label2.Text += "无";
+                Label1.Visible = false;
             }
             sqldr.Close();//关闭SqlDataReader对象
             sqlcon.Close();//关闭数据库连接
