@@ -50,6 +50,10 @@
 
     <div style="background-image:url('/Image/grey.jpg')">
 
+        <asp:Label ID="Label1" runat="server" Text="当前登录:"></asp:Label>
+        <asp:Label ID="Label2" runat="server"></asp:Label>
+        <asp:Button ID="Button8" runat="server" OnClick="Button8_Click" Text="注销" />
+
     </div>
     </form>
 </body>
