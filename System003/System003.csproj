@@ -103,6 +103,7 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Diaobo2.aspx" />
     <Content Include="Diaobo3.aspx" />
+    <Content Include="Diaobo4.aspx" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Image\BtnCancel.gif" />
     <Content Include="Image\BtnDelete.gif" />
@@ -190,6 +191,13 @@
     </Compile>
     <Compile Include="Diaobo3.aspx.designer.cs">
       <DependentUpon>Diaobo3.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Diaobo4.aspx.cs">
+      <DependentUpon>Diaobo4.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Diaobo4.aspx.designer.cs">
+      <DependentUpon>Diaobo4.aspx</DependentUpon>
     </Compile>
     <Compile Include="Kaika.aspx.cs">
       <DependentUpon>Kaika.aspx</DependentUpon>

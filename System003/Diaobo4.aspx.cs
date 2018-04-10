@@ -3,19 +3,14 @@ using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
-using System.Reflection.Emit;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
 namespace System003
 {
-    public partial class Diaobo3 : System.Web.UI.Page
+    public partial class Diaobo4 : System.Web.UI.Page
     {
-        string diaoboren,kuweimingcheng,shenqingshijian;
-        string[] iccid = new string[1000];
-        int i = 0;
-
         protected void Page_Load(object sender, EventArgs e)
         {
             try
@@ -26,7 +21,7 @@ namespace System003
                     sqlcon.Open();                              //打开数据库连接
                 }
                 //创建SqlCommand对象
-                SqlCommand sqlcmd = new SqlCommand("select * from aspnet_Kuwei;select * from aspnet_Linshika", sqlcon);
+                SqlCommand sqlcmd = new SqlCommand("select * from aspnet_Kuwei;select * from aspnet_Linshika;select * from aspnet_Dengluzhe", sqlcon);
                 //使用ExecuteReader方法的返回值创建SqlDataReader对象
                 SqlDataReader sqldr = sqlcmd.ExecuteReader();
                 do
@@ -40,16 +35,28 @@ namespace System003
                     }
                 }
                 while (sqldr.NextResult() == false);
+                do
+                {
+                    if (sqldr.HasRows)
+                    {
+                        while (sqldr.Read())
+                        {
+                            Label4.Text += sqldr[0] + "<br>";
+                        }
+                    }
+                }
+                while (sqldr.NextResult() == false);
                 if (sqldr.HasRows)
                 {
                     while (sqldr.Read())
                     {
-                        Label4.Text += sqldr[0] + "<br>";
+                        Label9.Text += sqldr[0] + "<br>";
                     }
                 }
                 sqldr.Dispose();
                 sqldr.Close();//关闭SqlDataReader对象
                 sqlcon.Close();//关闭数据库连接
+                Label6.Text = DateTime.Now.ToLocalTime().ToString();
             }
             catch
             {
@@ -59,46 +66,16 @@ namespace System003
 
         protected void Button7_Click(object sender, EventArgs e)
         {
-            //string diaoboren, kuweimingcheng, shenqingshijian, iccid;
             SqlConnection sqlcon = new SqlConnection("server=PC-201401242045;database=aspnetdb;uid=sa;pwd=ppzsppzs;");//创建数据库连接对象
             if (sqlcon.State == ConnectionState.Closed)     //判断连接是否关闭
             {
                 sqlcon.Open();                              //打开数据库连接
             }
-            SqlCommand sqlcmd = new SqlCommand("select * from aspnet_Dengluzhe", sqlcon);
+            SqlCommand sqlcmd = new SqlCommand("delete from aspnet_Kuwei;delete from aspnet_Linshika", sqlcon);
             SqlDataReader sqldr = sqlcmd.ExecuteReader();
-            if (sqldr.Read())
-            {
-                diaoboren = (string)sqldr[0];
-            }
             sqldr.Close();//关闭SqlDataReader对象
-
-            SqlCommand sqlcmd2 = new SqlCommand("select * from aspnet_Kuwei", sqlcon);
-            SqlDataReader sqldr2 = sqlcmd2.ExecuteReader();
-            if (sqldr2.Read())
-            {
-                kuweimingcheng = (string)sqldr2[0];
-            }
-            sqldr2.Close();//关闭SqlDataReader对象            
-
-            SqlCommand sqlcmd3 = new SqlCommand("select * from aspnet_Linshika", sqlcon);
-            SqlDataReader sqldr3 = sqlcmd3.ExecuteReader();
-            while (sqldr3.Read())
-            {
-                iccid[i] = (string)sqldr3[0];
-                i++;
-            }
-            sqldr3.Close();//关闭SqlDataReader对象
-
-            shenqingshijian = DateTime.Now.ToLocalTime().ToString();
-            for (int j = 0; j < i; j++)
-            {
-                SqlCommand sqlcmd4 = new SqlCommand("insert into aspnet_Diaobotest(库位名称,调拨人,ICCID,申请时间) values ('" + kuweimingcheng + "','" + diaoboren + "','" + iccid[j] + "','" + shenqingshijian + "');", sqlcon);
-                SqlDataReader sqldr4 = sqlcmd4.ExecuteReader();
-                sqldr4.Close();//关闭SqlDataReader对象
-            }
             sqlcon.Close();//关闭数据库连接
-            Response.Write("<script>window.alert('调拨成功！');location.href='Diaobo4.aspx';</script>");
+            Response.Redirect("Diaobo.aspx");
         }
     }
 }
