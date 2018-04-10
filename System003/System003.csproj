@@ -97,6 +97,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Chaxun.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -137,7 +138,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Baobiao.aspx" />
-    <Content Include="Chaxun.aspx" />
+    <Content Include="Chaxun2.aspx" />
     <Content Include="Default.aspx" />
     <Content Include="Diaobo.aspx" />
     <Content Include="Image\1.jpg" />
@@ -163,6 +164,13 @@
     </Compile>
     <Compile Include="Chaxun.aspx.designer.cs">
       <DependentUpon>Chaxun.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Chaxun2.aspx.cs">
+      <DependentUpon>Chaxun2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Chaxun2.aspx.designer.cs">
+      <DependentUpon>Chaxun2.aspx</DependentUpon>
     </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
