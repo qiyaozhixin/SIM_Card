@@ -106,10 +106,6 @@
     <Content Include="Diaobo3.aspx" />
     <Content Include="Diaobo4.aspx" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
-    <Content Include="Image\BtnCancel.gif" />
-    <Content Include="Image\BtnDelete.gif" />
-    <Content Include="Image\BtnSave.gif" />
-    <Content Include="Image\BtnUpdate.gif" />
     <Content Include="Image\grey.jpg" />
     <Content Include="packages.config" />
     <Content Include="ApplicationInsights.config">
@@ -143,7 +139,6 @@
     <Content Include="Diaobo.aspx" />
     <Content Include="Image\1.jpg" />
     <Content Include="Image\2.jpg" />
-    <Content Include="Image\A9348F4140B85DB4557AB3DFF1F12E7E.jpg" />
     <Content Include="Image\S%28ZN83CH~EXEJJKKV%243D}M5.jpg" />
     <Content Include="Kaika.aspx" />
     <Content Include="Web.config">

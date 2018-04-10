@@ -23,10 +23,12 @@ namespace System003
             SqlDataReader sqldr = sqlcmd.ExecuteReader();
             Button8.Visible = false;
             Label1.Visible = true;
+            Button7.Visible = true;
             if (sqldr.Read())
             {
                 Label2.Text += sqldr[0];
                 Button8.Visible = true;
+                Button7.Visible = false;
             }
             else
             {
