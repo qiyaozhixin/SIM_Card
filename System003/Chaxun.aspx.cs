@@ -17,7 +17,14 @@ namespace System003
         protected void Button9_Click(object sender, EventArgs e)
         {
             Session["iccid"] = TextBox1.Text;
-            Response.Redirect("Chaxun2.aspx");
+            if(TextBox1.Text == "")
+            {
+                Response.Write("<script>window.alert('请输入ICCID！');location.href='Chaxun.aspx';</script>");
+            }
+            else
+            {
+                Response.Redirect("Chaxun2.aspx");
+            }
         }
     }
 }

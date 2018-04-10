@@ -27,6 +27,7 @@ namespace System003
                 GridView1.DataBind();
                 sqldr.Close();//关闭SqlDataReader对象
                 sqlcon.Close();//关闭数据库连接
+                Session.Remove("iccid");
             }
             catch
             {

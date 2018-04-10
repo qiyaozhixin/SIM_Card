@@ -42,6 +42,7 @@ namespace System003
 
         protected void Button7_Click(object sender, EventArgs e)
         {
+            int check = 0;
             for (int i = 0; i <= GridView1.Rows.Count - 1; i++)
             {
                 CheckBox cbox = (CheckBox)GridView1.Rows[i].FindControl("CheckBox1");
@@ -57,9 +58,17 @@ namespace System003
                     SqlDataReader sqldr = sqlcmd.ExecuteReader();
                     sqldr.Close();//关闭SqlDataReader对象
                     sqlcon.Close();//关闭数据库连接
+                    check++;
                 }
             }
-            Response.Redirect("Diaobo3.aspx");
+            if (check == 0)
+            {
+                Response.Write("<script>window.alert('请至少选择一张卡！');location.href='Diaobo2.aspx';</script>");
+            }
+            else
+            {
+                Response.Redirect("Diaobo3.aspx");
+            }
         }
     }
 }
