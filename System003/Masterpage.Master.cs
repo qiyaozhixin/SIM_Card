@@ -21,6 +21,7 @@ namespace System003
             }
             //使用ExecuteReader方法的返回值创建SqlDataReader对象
             Label2.Text = string.Format("{0}", sqlcmd.ExecuteScalar());
+            Session["dangqiandenglu"] = string.Format("{0}", sqlcmd.ExecuteScalar());
             SqlDataReader sqldr = sqlcmd.ExecuteReader();
             Button8.Visible = false;
             Label1.Visible = true;

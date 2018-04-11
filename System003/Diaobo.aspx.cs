@@ -23,7 +23,7 @@ namespace System003
         public void BindData()
         {
             //定义执行查询操作的SQL语句
-            string sqlstr = "select * from aspnet_Yuangongtest";
+            string sqlstr = "select * from aspnet_Yuangongtest where 员工OA <> '" + Session["dangqiandenglu"] + "'";
             //创建数据库连接对象
             SqlConnection con = new SqlConnection("server=PC-201401242045;database=aspnetdb;uid=sa;pwd=ppzsppzs;");
             //创建数据适配器
@@ -46,7 +46,7 @@ namespace System003
             {
                 SqlConnection sqlcon = new SqlConnection("server=PC-201401242045;database=aspnetdb;uid=sa;pwd=ppzsppzs;");//创建数据库连接对象
                                                                                                                           //创建SqlCommand对象
-                SqlCommand sqlcmd = new SqlCommand("select * from aspnet_Yuangongtest", sqlcon);
+                SqlCommand sqlcmd = new SqlCommand("select * from aspnet_Yuangongtest where 员工OA <> '" + Session["dangqiandenglu"] + "'", sqlcon);
                 if (sqlcon.State == ConnectionState.Closed)     //判断连接是否关闭
                 {
                     sqlcon.Open();                              //打开数据库连接

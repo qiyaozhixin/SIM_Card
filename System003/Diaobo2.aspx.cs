@@ -23,7 +23,7 @@ namespace System003
         public void BindData()
         {
             //定义执行查询操作的SQL语句
-            string sqlstr = "select * from aspnet_Cardtest";
+            string sqlstr = "select * from aspnet_Cardtest where 当前库位 = '" + Session["dangqiandenglu"] + "'";
             //创建数据库连接对象
             SqlConnection con = new SqlConnection("server=PC-201401242045;database=aspnetdb;uid=sa;pwd=ppzsppzs;");
             //创建数据适配器
