@@ -34,6 +34,7 @@
         <asp:Button ID="Button3" runat="server" PostBackUrl="~/Baobiao.aspx" Text="报表" />
         <asp:Button ID="Button4" runat="server" PostBackUrl="~/Kaika.aspx" Text="开卡" />
         <asp:Button ID="Button7" runat="server" PostBackUrl="~/Wode.aspx" Text="我的" />
+        <asp:Button ID="Button9" runat="server" PostBackUrl="~/Wodedenglu.aspx" Text="登录" Visible="False" />
     </div>
     <div class="content">
         <asp:ContentPlaceHolder ID="ContentPlaceHolderMain" runat="server">
@@ -44,10 +45,10 @@
         Copyright©1999-2018  中国联通  版权所有
             </div>
     </div>
-        <asp:LoginName ID="LoginName1" runat="server" />
 
-    <div style="background-image:url('/Image/grey.jpg')">
-
+    <div style="background-image:url('/Image/grey.jpg')">        
+            <asp:Label ID="Label3" runat="server" Font-Size="XX-Large" ForeColor="Red" Text="请登录后进行其他操作！" Visible="False"></asp:Label>
+        <br />
         <asp:Label ID="Label1" runat="server" Text="当前登录:"></asp:Label>
         <asp:Label ID="Label2" runat="server"></asp:Label>
         <asp:Button ID="Button8" runat="server" OnClick="Button8_Click" Text="注销" />

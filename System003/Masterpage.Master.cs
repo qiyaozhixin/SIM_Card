@@ -25,16 +25,24 @@ namespace System003
             Button8.Visible = false;
             Label1.Visible = true;
             Button7.Visible = true;
-            if (sqldr.Read())
+            //Label3.Visible = false;
+            if (sqldr.Read())//有登陆
             {
                 //Label2.Text += sqldr[0];
                 //Label2.Text = string.Format("{0}", sqlcmd.ExecuteScalar());
                 Button8.Visible = true;
-                Button7.Visible = false;
+                //Button7.Visible = false;
             }
-            else
+            else//还未登陆
             {
                 Label1.Visible = false;
+                Label3.Visible = true;
+                Button1.Visible = false;
+                Button2.Visible = false;
+                Button3.Visible = false;
+                Button4.Visible = false;
+                Button7.Visible = false;
+                Button9.Visible = true;
             }
             sqldr.Close();//关闭SqlDataReader对象
             sqlcon.Close();//关闭数据库连接
@@ -53,7 +61,7 @@ namespace System003
             sqldr.Close();//关闭SqlDataReader对象
             sqlcon.Close();//关闭数据库连接
             //System.Threading.Thread.Sleep(3000);
-            Response.Redirect("Wode.aspx");
+            Response.Redirect("Wodedenglu.aspx");
         }
     }
 }

@@ -10,4 +10,7 @@
     <br />
     <asp:Button ID="Button8" runat="server" Text="确认" OnClick="Button8_Click" />
     <asp:Label ID="Label3" runat="server" Visible="False"></asp:Label>
+    <br />
+<asp:Label ID="Label4" runat="server" Text="如果还没有账号，请"></asp:Label>
+<asp:Button ID="Button9" runat="server" PostBackUrl="~/Wodezhuce.aspx" Text="注册" />
 </asp:Content>
