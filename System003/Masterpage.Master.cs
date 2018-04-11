@@ -20,13 +20,15 @@ namespace System003
                 sqlcon.Open();                              //打开数据库连接
             }
             //使用ExecuteReader方法的返回值创建SqlDataReader对象
+            Label2.Text = string.Format("{0}", sqlcmd.ExecuteScalar());
             SqlDataReader sqldr = sqlcmd.ExecuteReader();
             Button8.Visible = false;
             Label1.Visible = true;
             Button7.Visible = true;
             if (sqldr.Read())
             {
-                Label2.Text += sqldr[0];
+                //Label2.Text += sqldr[0];
+                //Label2.Text = string.Format("{0}", sqlcmd.ExecuteScalar());
                 Button8.Visible = true;
                 Button7.Visible = false;
             }
