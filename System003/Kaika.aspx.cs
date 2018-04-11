@@ -11,7 +11,7 @@ namespace System003
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            Response.Write("<script>alert('提示：激活前需准备好本人的身份证和SIM卡！')</script>");
         }
     }
 }

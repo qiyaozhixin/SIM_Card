@@ -140,8 +140,6 @@
     <Content Include="Default.aspx" />
     <Content Include="Diaobo.aspx" />
     <Content Include="Image\1.jpg" />
-    <Content Include="Image\2.jpg" />
-    <Content Include="Image\S%28ZN83CH~EXEJJKKV%243D}M5.jpg" />
     <Content Include="Kaika.aspx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
