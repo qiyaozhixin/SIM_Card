@@ -110,6 +110,8 @@
     <Content Include="Diaobo4.aspx" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Image\grey.jpg" />
+    <Content Include="Kaika2.aspx" />
+    <Content Include="Kaika3.aspx" />
     <Content Include="packages.config" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -229,6 +231,20 @@
     </Compile>
     <Compile Include="Kaika.aspx.designer.cs">
       <DependentUpon>Kaika.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Kaika2.aspx.cs">
+      <DependentUpon>Kaika2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Kaika2.aspx.designer.cs">
+      <DependentUpon>Kaika2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Kaika3.aspx.cs">
+      <DependentUpon>Kaika3.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Kaika3.aspx.designer.cs">
+      <DependentUpon>Kaika3.aspx</DependentUpon>
     </Compile>
     <Compile Include="Masterpage.Master.cs">
       <DependentUpon>Masterpage.Master</DependentUpon>

@@ -12,7 +12,7 @@ namespace System003
 {
     public partial class Diaobo3 : System.Web.UI.Page
     {
-        string diaoboren,kuweimingcheng,shenqingshijian;
+        string diaoboren,kuweimingcheng;
         string[] iccid = new string[1000];
         int i = 0;
 
@@ -90,10 +90,11 @@ namespace System003
             }
             sqldr3.Close();//关闭SqlDataReader对象
 
-            shenqingshijian = DateTime.Now.ToLocalTime().ToString();
+            //shenqingshijian = DateTime.Now.ToLocalTime().ToString();
+            Session["shengqingshijian_diaobo"] = DateTime.Now.ToLocalTime().ToString();
             for (int j = 0; j < i; j++)
             {
-                SqlCommand sqlcmd4 = new SqlCommand("insert into aspnet_Diaobotest(库位名称,调拨人,ICCID,申请时间) values ('" + kuweimingcheng + "','" + diaoboren + "','" + iccid[j] + "','" + shenqingshijian + "');update aspnet_Cardtest set 当前库位 = '" + kuweimingcheng + "' where ICCID = '" + iccid[j] + "';update aspnet_Cardtest set 最近调拨 = '" + diaoboren + "' where ICCID = '" + iccid[j] + "';", sqlcon);
+                SqlCommand sqlcmd4 = new SqlCommand("insert into aspnet_Diaobotest(库位名称,调拨人,ICCID,申请时间) values ('" + kuweimingcheng + "','" + diaoboren + "','" + iccid[j] + "','" + Session["shengqingshijian_diaobo"] + "');update aspnet_Cardtest set 当前库位 = '" + kuweimingcheng + "' where ICCID = '" + iccid[j] + "';update aspnet_Cardtest set 最近调拨 = '" + diaoboren + "' where ICCID = '" + iccid[j] + "';", sqlcon);
                 SqlDataReader sqldr4 = sqlcmd4.ExecuteReader();
                 sqldr4.Close();//关闭SqlDataReader对象
             }
