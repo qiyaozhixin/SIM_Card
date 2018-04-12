@@ -67,7 +67,7 @@ namespace System003
 
         protected void Button4_Click(object sender, EventArgs e)
         {
-            Response.Write("<script>alert('提示：激活前需准备好本人的身份证和SIM卡！')</script>");
+            Response.Write("<script>window.alert('提示：激活前需准备好本人的身份证和SIM卡！');location.href='Kaika.aspx';</script>");
         }
     }
 }
