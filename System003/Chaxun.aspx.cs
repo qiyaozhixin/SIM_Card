@@ -16,7 +16,7 @@ namespace System003
 
         protected void Button9_Click(object sender, EventArgs e)
         {
-            Session["iccid_chaxun"] = TextBox1.Text;
+            Session["iccid_diaobochaxun"] = TextBox1.Text;
             if(TextBox1.Text == "")
             {
                 Response.Write("<script>window.alert('请输入ICCID！');location.href='Chaxun.aspx';</script>");
@@ -24,6 +24,19 @@ namespace System003
             else
             {
                 Response.Redirect("Chaxun2.aspx");
+            }
+        }
+
+        protected void Button10_Click(object sender, EventArgs e)
+        {
+            Session["iccid_xiaoshouchaxun"] = TextBox1.Text;
+            if (TextBox1.Text == "")
+            {
+                Response.Write("<script>window.alert('请输入ICCID！');location.href='Chaxun.aspx';</script>");
+            }
+            else
+            {
+                Response.Redirect("Chaxun3.aspx");
             }
         }
     }
