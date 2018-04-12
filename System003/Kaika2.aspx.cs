@@ -24,7 +24,7 @@ namespace System003
             //xiaoshoushijian = DateTime.Now.ToLocalTime().ToString();
             Session["xiaoshoushijian_kaika"] = DateTime.Now.ToLocalTime().ToString();
             SqlConnection sqlcon = new SqlConnection("server=PC-201401242045;database=aspnetdb;uid=sa;pwd=ppzsppzs;");//创建数据库连接对象                                                                                                                    //创建SqlCommand对象
-            SqlCommand sqlcmd = new SqlCommand("insert into aspnet_Xiaoshoutest(ICCID,PUK码,套餐类型,销售者,销售时间,身份证号) values ('" + Session["iccid_kaika"] + "','" + Session["PUKma_kaika"] + "','" + Session["taocanleixing_kaika"] + "','" + Session["dangqiandenglu"] + "','" + Session["xiaoshoushijian_kaika"] + "','" + Session["IDnumber_kaika"] + "');", sqlcon);
+            SqlCommand sqlcmd = new SqlCommand("insert into aspnet_Xiaoshoutest(ICCID,PUK码,套餐类型,销售者,销售时间,身份证号) values ('" + Session["iccid_kaika"] + "','" + Session["PUKma_kaika"] + "','" + Session["taocanleixing_kaika"] + "','" + Session["dangqiandenglu"] + "','" + Session["xiaoshoushijian_kaika"] + "','" + Session["IDnumber_kaika"] + "');update aspnet_Cardtest set 卡状态 = 1 where ICCID = '" + Session["iccid_kaika"] + "';", sqlcon);
             if (sqlcon.State == ConnectionState.Closed)     //判断连接是否关闭
             {
                 sqlcon.Open();                              //打开数据库连接

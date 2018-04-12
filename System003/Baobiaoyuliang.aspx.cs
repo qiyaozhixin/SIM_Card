@@ -21,7 +21,7 @@ namespace System003
                     sqlcon.Open();                              //打开数据库连接
                 }
                 //创建SqlCommand对象
-                SqlCommand sqlcmd = new SqlCommand("select 所在部门 from aspnet_Yuangongtest where 员工OA = '" + Session["baobiaoyuangongoa"] + "';select count(*) from aspnet_Diaobotest where 库位名称 = '" + Session["baobiaoyuangongoa"] + "'", sqlcon);
+                SqlCommand sqlcmd = new SqlCommand("select 所在部门 from aspnet_Yuangongtest where 员工OA = '" + Session["baobiaoyuangongoa"] + "';select count(*) from aspnet_Cardtest where 当前库位 = '" + Session["baobiaoyuangongoa"] + "' and 卡状态 <> 1", sqlcon);
                 //使用ExecuteReader方法的返回值创建SqlDataReader对象
                 SqlDataReader sqldr = sqlcmd.ExecuteReader();
                 do

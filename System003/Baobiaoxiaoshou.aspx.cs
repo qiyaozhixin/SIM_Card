@@ -21,7 +21,7 @@ namespace System003
                     sqlcon.Open();                              //打开数据库连接
                 }
                 //创建SqlCommand对象
-                SqlCommand sqlcmd = new SqlCommand("select 所在部门 from aspnet_Yuangongtest where 员工OA = '" + Session["baobiaoyuangongoa"] + "';select count(*) from aspnet_Diaobotest where 调拨人 = '" + Session["baobiaoyuangongoa"] + "'", sqlcon);
+                SqlCommand sqlcmd = new SqlCommand("select 所在部门 from aspnet_Yuangongtest where 员工OA = '" + Session["baobiaoyuangongoa"] + "';select count(*) from aspnet_Xiaoshoutest where 销售者 = '" + Session["baobiaoyuangongoa"] + "'", sqlcon);
                 //使用ExecuteReader方法的返回值创建SqlDataReader对象
                 SqlDataReader sqldr = sqlcmd.ExecuteReader();
                 do
@@ -47,6 +47,7 @@ namespace System003
                 sqlcon.Close();//关闭数据库连接
                 Label6.Text += Session["baobiaoyuangongoa"];
                 Label10.Text = DateTime.Now.ToLocalTime().ToString();
+                Session.Remove("baobiaoyuangongoa");
             }
             catch
             {
