@@ -96,16 +96,7 @@ namespace System003
                 CheckBox cbox = (CheckBox)GridView1.Rows[i].FindControl("CheckBox1");
                 if (cbox.Checked == true)
                 {
-                    string str = GridView1.Rows[i].Cells[0].Text;//获取想要的行
-                    SqlConnection sqlcon = new SqlConnection("server=PC-201401242045;database=aspnetdb;uid=sa;pwd=ppzsppzs;");//创建数据库连接对象
-                    if (sqlcon.State == ConnectionState.Closed)     //判断连接是否关闭
-                    {
-                        sqlcon.Open();                              //打开数据库连接
-                    }
-                    SqlCommand sqlcmd = new SqlCommand("delete from aspnet_Kuwei;insert into aspnet_Kuwei values('" + GridView1.Rows[i].Cells[0].Text + "')", sqlcon);
-                    SqlDataReader sqldr = sqlcmd.ExecuteReader();
-                    sqldr.Close();//关闭SqlDataReader对象
-                    sqlcon.Close();//关闭数据库连接
+                    Session["kuwei_diaobo"] = GridView1.Rows[i].Cells[0].Text;
                     check++;
                 }
             }

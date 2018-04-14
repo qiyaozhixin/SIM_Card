@@ -12,7 +12,7 @@ namespace System003
 {
     public partial class Diaobo3 : System.Web.UI.Page
     {
-        string diaoboren,kuweimingcheng;
+        string diaoboren;
         string[] iccid = new string[1000];
         int i = 0;
 
@@ -20,26 +20,16 @@ namespace System003
         {
             try
             {
+                Label1.Text += Session["kuwei_diaobo"];
                 SqlConnection sqlcon = new SqlConnection("server=PC-201401242045;database=aspnetdb;uid=sa;pwd=ppzsppzs;");//创建数据库连接对象
                 if (sqlcon.State == ConnectionState.Closed)     //判断连接是否关闭
                 {
                     sqlcon.Open();                              //打开数据库连接
                 }
                 //创建SqlCommand对象
-                SqlCommand sqlcmd = new SqlCommand("select * from aspnet_Kuwei;select * from aspnet_Linshika", sqlcon);
+                SqlCommand sqlcmd = new SqlCommand("select * from aspnet_Linshika", sqlcon);
                 //使用ExecuteReader方法的返回值创建SqlDataReader对象
                 SqlDataReader sqldr = sqlcmd.ExecuteReader();
-                do
-                {
-                    if (sqldr.HasRows)
-                    {
-                        while (sqldr.Read())
-                        {
-                            Label1.Text += sqldr[0] + "<br>";
-                        }
-                    }
-                }
-                while (sqldr.NextResult() == false);
                 if (sqldr.HasRows)
                 {
                     while (sqldr.Read())
@@ -72,15 +62,7 @@ namespace System003
                 diaoboren = (string)sqldr[0];
             }
             sqldr.Close();//关闭SqlDataReader对象
-
-            SqlCommand sqlcmd2 = new SqlCommand("select * from aspnet_Kuwei", sqlcon);
-            SqlDataReader sqldr2 = sqlcmd2.ExecuteReader();
-            if (sqldr2.Read())
-            {
-                kuweimingcheng = (string)sqldr2[0];
-            }
-            sqldr2.Close();//关闭SqlDataReader对象            
-
+          
             SqlCommand sqlcmd3 = new SqlCommand("select * from aspnet_Linshika", sqlcon);
             SqlDataReader sqldr3 = sqlcmd3.ExecuteReader();
             while (sqldr3.Read())
@@ -89,12 +71,11 @@ namespace System003
                 i++;
             }
             sqldr3.Close();//关闭SqlDataReader对象
-
-            //shenqingshijian = DateTime.Now.ToLocalTime().ToString();
+            
             Session["shengqingshijian_diaobo"] = DateTime.Now.ToLocalTime().ToString();
             for (int j = 0; j < i; j++)
             {
-                SqlCommand sqlcmd4 = new SqlCommand("insert into aspnet_Diaobotest(库位名称,调拨人,ICCID,申请时间) values ('" + kuweimingcheng + "','" + diaoboren + "','" + iccid[j] + "','" + Session["shengqingshijian_diaobo"] + "');update aspnet_Cardtest set 当前库位 = '" + kuweimingcheng + "' where ICCID = '" + iccid[j] + "';update aspnet_Cardtest set 最近调拨 = '" + diaoboren + "' where ICCID = '" + iccid[j] + "';", sqlcon);
+                SqlCommand sqlcmd4 = new SqlCommand("insert into aspnet_Diaobotest(库位名称,调拨人,ICCID,申请时间) values ('" + Session["kuwei_diaobo"] + "','" + diaoboren + "','" + iccid[j] + "','" + Session["shengqingshijian_diaobo"] + "');update aspnet_Cardtest set 当前库位 = '" + Session["kuwei_diaobo"] + "' where ICCID = '" + iccid[j] + "';update aspnet_Cardtest set 最近调拨 = '" + diaoboren + "' where ICCID = '" + iccid[j] + "';", sqlcon);
                 SqlDataReader sqldr4 = sqlcmd4.ExecuteReader();
                 sqldr4.Close();//关闭SqlDataReader对象
             }
