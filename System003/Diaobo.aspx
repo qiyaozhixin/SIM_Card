@@ -16,7 +16,18 @@
                 </asp:TemplateField>
         </Columns>
     </asp:GridView>
-    <asp:Label ID="Label3" runat="server" Text="注意：只能选择一名员工!"></asp:Label>
+    <asp:GridView ID="GridView2" runat="server" AutoGenerateColumns="False" PageSize="5">
+        <Columns>
+                <asp:BoundField DataField="客户经理OA" HeaderText="客户经理OA" ReadOnly="True" />
+                <asp:BoundField DataField="网点名称" HeaderText="网点名称" />
+                <asp:TemplateField HeaderText="选择">
+                    <ItemTemplate>
+                        <asp:CheckBox ID="CheckBox2" runat="server" />
+                    </ItemTemplate>
+                </asp:TemplateField>
+        </Columns>
+    </asp:GridView>
+    <asp:Label ID="Label3" runat="server" Text="注意：只能选择其中一项!"></asp:Label>
     <br />
     <asp:Button ID="Button9" runat="server" OnClick="Button9_Click" Text="下一步" />
     </asp:Content>

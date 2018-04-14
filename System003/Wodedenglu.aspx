@@ -2,6 +2,11 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolderMain" runat="server">
+    <asp:DropDownList ID="DropDownList1" runat="server" AutoPostBack="True">
+        <asp:ListItem>员工登录</asp:ListItem>
+        <asp:ListItem>地推网点经理登录</asp:ListItem>
+    </asp:DropDownList>
+    <br />
     <asp:Label ID="Label1" runat="server" Text="OA"></asp:Label>
     <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
     <br />
