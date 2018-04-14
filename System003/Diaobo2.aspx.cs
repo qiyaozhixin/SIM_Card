@@ -70,5 +70,14 @@ namespace System003
                 Response.Redirect("Diaobo3.aspx");
             }
         }
+
+        protected void Button11_Click(object sender, EventArgs e)
+        {
+            for (int i = 0; i <= GridView1.Rows.Count - 1; i++)
+            {
+                CheckBox cbox = (CheckBox)GridView1.Rows[i].FindControl("CheckBox1");              
+                cbox.Checked = true;
+            }
+        }
     }
 }

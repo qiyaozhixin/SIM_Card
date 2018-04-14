@@ -13,6 +13,8 @@
                 </asp:TemplateField>
         </Columns>
     </asp:GridView>
+    <asp:Button ID="Button11" runat="server" OnClick="Button11_Click" Text="全选" />
+    <br />
     <asp:Label ID="Label5" runat="server" Text="身份证号"></asp:Label>
     <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
     <br />

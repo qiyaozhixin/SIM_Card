@@ -14,5 +14,6 @@
                 </asp:TemplateField>
         </Columns>
     </asp:GridView>
+     <asp:Button ID="Button11" runat="server" OnClick="Button11_Click" Text="全选" />
     <asp:Button ID="Button7" runat="server" OnClick="Button7_Click" Text="下一步" />
 </asp:Content>
