@@ -19,7 +19,7 @@ namespace System003
                 BindData();
 
                 SqlConnection sqlcon = new SqlConnection("server=PC-201401242045;database=aspnetdb;uid=sa;pwd=ppzsppzs;");//创建数据库连接对象                                                                                                                          //创建SqlCommand对象
-                SqlCommand sqlcmd = new SqlCommand("select * from aspnet_Cardtest where 当前库位 = '" + Session["dangqiandenglu"] + "'", sqlcon);
+                SqlCommand sqlcmd = new SqlCommand("select * from aspnet_Cardtest where 当前库位 = '" + Session["dangqiandenglu"] + "' and 卡状态 <> 1", sqlcon);
                 if (sqlcon.State == ConnectionState.Closed)     //判断连接是否关闭
                 {
                     sqlcon.Open();                              //打开数据库连接
@@ -32,7 +32,7 @@ namespace System003
                 }
                 else
                 {
-                    Response.Write("<script>window.alert('当前库位中没有电话卡！');location.href='Default.aspx';</script>");
+                    Response.Write("<script>window.alert('当前库位中没有可调拨的电话卡！');location.href='Default.aspx';</script>");
                 }
                 sqldr.Close();//关闭SqlDataReader对象
                 sqlcon.Close();//关闭数据库连接
@@ -122,6 +122,10 @@ namespace System003
             if (check == 1)
             {
                 Response.Redirect("Diaobo2.aspx");
+            }
+            else if (check == 0)
+            {
+                Response.Write("<script>window.alert('请至少选择一名员工！');location.href='Diaobo.aspx';</script>");
             }
             else
             {

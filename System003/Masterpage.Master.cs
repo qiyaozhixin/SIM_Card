@@ -43,6 +43,7 @@ namespace System003
                 Button3.Visible = false;
                 Button4.Visible = false;
                 Button7.Visible = false;
+                Button10.Visible = false;
                 Button9.Visible = true;
             }
             sqldr.Close();//关闭SqlDataReader对象

@@ -20,5 +20,7 @@
     <br />
     <asp:Label ID="Label12" runat="server"></asp:Label>
     <br />
+    <asp:Button ID="Button11" runat="server" PostBackUrl="~/Kaika.aspx" Text="上一步" />
+    <br />
     <asp:Button ID="Button10" runat="server" Text="确定" OnClick="Button10_Click" />
 </asp:Content>

@@ -42,6 +42,17 @@ namespace System003
 
         protected void Button7_Click(object sender, EventArgs e)
         {
+            SqlConnection sqlcon2 = new SqlConnection("server=PC-201401242045;database=aspnetdb;uid=sa;pwd=ppzsppzs;");//创建数据库连接对象                                                                                                                     //创建SqlCommand对象
+            SqlCommand sqlcmd2 = new SqlCommand("delete from aspnet_Linshika", sqlcon2);
+            if (sqlcon2.State == ConnectionState.Closed)     //判断连接是否关闭
+            {
+                sqlcon2.Open();                              //打开数据库连接
+            }
+            //使用ExecuteReader方法的返回值创建SqlDataReader对象
+            SqlDataReader sqldr2 = sqlcmd2.ExecuteReader();
+            sqldr2.Close();//关闭SqlDataReader对象
+            sqlcon2.Close();//关闭数据库连接
+
             int check = 0;
             for (int i = 0; i <= GridView1.Rows.Count - 1; i++)
             {

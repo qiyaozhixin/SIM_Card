@@ -58,15 +58,6 @@ namespace System003
 
         protected void Button7_Click(object sender, EventArgs e)
         {
-            SqlConnection sqlcon = new SqlConnection("server=PC-201401242045;database=aspnetdb;uid=sa;pwd=ppzsppzs;");//创建数据库连接对象
-            if (sqlcon.State == ConnectionState.Closed)     //判断连接是否关闭
-            {
-                sqlcon.Open();                              //打开数据库连接
-            }
-            SqlCommand sqlcmd = new SqlCommand("delete from aspnet_Linshika", sqlcon);
-            SqlDataReader sqldr = sqlcmd.ExecuteReader();
-            sqldr.Close();//关闭SqlDataReader对象
-            sqlcon.Close();//关闭数据库连接
             Response.Redirect("Diaobo.aspx");
         }
     }
