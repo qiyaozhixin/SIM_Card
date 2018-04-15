@@ -30,8 +30,13 @@ namespace System003
                 {
                     while (sqldr.Read())
                     {
-                        Label2.Text += sqldr[0];
-                        Session["dangqiandenglu"] = Label2.Text;
+                        //Label2.Text += sqldr[0];
+                        //Session["dangqiandenglu"] = Label2.Text;
+                        Session["dangqiandenglu"] = sqldr[0];
+                        if(Label2.Text == "")
+                        {
+                            Label2.Text += Session["dangqiandenglu"];
+                        }
                     }
                 }
             }

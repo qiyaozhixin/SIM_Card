@@ -49,7 +49,6 @@
 
     <div style="background-image:url('/Image/grey.jpg')">        
             <asp:Label ID="Label3" runat="server" Font-Size="XX-Large" ForeColor="Red" Text="请登录后进行其他操作！" Visible="False"></asp:Label>
-        <br />
         <asp:Label ID="Label1" runat="server" Text="当前登录:"></asp:Label>
         <asp:Label ID="Label2" runat="server"></asp:Label>
         <asp:Button ID="Button8" runat="server" OnClick="Button8_Click" Text="注销" />
