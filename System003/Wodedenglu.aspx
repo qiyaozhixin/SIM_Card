@@ -5,6 +5,7 @@
     <asp:DropDownList ID="DropDownList1" runat="server" AutoPostBack="True">
         <asp:ListItem>员工登录</asp:ListItem>
         <asp:ListItem>地推网点经理登录</asp:ListItem>
+        <asp:ListItem>总经理登录</asp:ListItem>
     </asp:DropDownList>
     <br />
     <asp:Label ID="Label1" runat="server" Text="OA"></asp:Label>

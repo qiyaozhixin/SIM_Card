@@ -36,7 +36,7 @@ namespace System003
                 sqldr.Close();//关闭SqlDataReader对象
                 if (TextBox2.Text == Label3.Text)
                 {
-                    SqlCommand sqlcmd2 = new SqlCommand("insert into aspnet_Dengluzhe values ('" + str + "');", sqlcon);
+                    SqlCommand sqlcmd2 = new SqlCommand("insert into aspnet_Dengluzhe values ('" + str + "','1');", sqlcon);
                     //使用ExecuteReader方法的返回值创建SqlDataReader对象
                     SqlDataReader sqldr2 = sqlcmd2.ExecuteReader();
                     sqldr2.Close();//关闭SqlDataReader对象
@@ -49,7 +49,7 @@ namespace System003
                 sqlcon.Close();//关闭数据库连接
             }
 
-            else
+            else if (DropDownList1.Text == "地推网点经理登录")
             {
                 string str = TextBox1.Text;
                 SqlConnection sqlcon = new SqlConnection("server=PC-201401242045;database=aspnetdb;uid=sa;pwd=ppzsppzs;");//创建数据库连接对象
@@ -67,7 +67,36 @@ namespace System003
                 sqldr.Close();//关闭SqlDataReader对象
                 if (TextBox2.Text == Label3.Text)
                 {
-                    SqlCommand sqlcmd2 = new SqlCommand("insert into aspnet_Dengluzhe values ('" + str + "');", sqlcon);
+                    SqlCommand sqlcmd2 = new SqlCommand("insert into aspnet_Dengluzhe values ('" + str + "','2');", sqlcon);
+                    //使用ExecuteReader方法的返回值创建SqlDataReader对象
+                    SqlDataReader sqldr2 = sqlcmd2.ExecuteReader();
+                    sqldr2.Close();//关闭SqlDataReader对象
+                    Response.Write("<script>window.alert('登陆成功!');location.href='Default.aspx';</script>");
+                }
+                else
+                {
+                    Response.Write("<script>window.alert('登陆失败，请检查客户经理OA及密码输入是否正确！');location.href='Wodedenglu.aspx';</script>");
+                }
+                sqlcon.Close();//关闭数据库连接
+            }
+
+            else
+            {
+                SqlConnection sqlcon = new SqlConnection("server=PC-201401242045;database=aspnetdb;uid=sa;pwd=ppzsppzs;");//创建数据库连接对象
+                if (sqlcon.State == ConnectionState.Closed)     //判断连接是否关闭
+                {
+                    sqlcon.Open();                              //打开数据库连接
+                }
+                SqlCommand sqlcmd = new SqlCommand("select 密码 from aspnet_Dituiwangdiantest where 客户经理OA =  'boss';", sqlcon);
+                SqlDataReader sqldr = sqlcmd.ExecuteReader();
+                while (sqldr.Read())
+                {
+                    Label3.Text += sqldr[0];
+                }
+                sqldr.Close();//关闭SqlDataReader对象
+                if (TextBox2.Text == Label3.Text)
+                {
+                    SqlCommand sqlcmd2 = new SqlCommand("insert into aspnet_Dengluzhe values ('boss','3');", sqlcon);
                     //使用ExecuteReader方法的返回值创建SqlDataReader对象
                     SqlDataReader sqldr2 = sqlcmd2.ExecuteReader();
                     sqldr2.Close();//关闭SqlDataReader对象
