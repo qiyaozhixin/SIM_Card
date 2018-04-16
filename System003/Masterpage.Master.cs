@@ -101,5 +101,21 @@ namespace System003
         {
             Response.Write("<script>window.alert('提示：激活前需准备好本人的身份证和SIM卡！');location.href='Kaika.aspx';</script>");
         }
+
+        protected void Button3_Click(object sender, EventArgs e)
+        {
+            if (int.Parse(Session["quanxian"].ToString()) == 1)
+            {
+                Response.Redirect("Baobiao.aspx");
+            }
+            if (int.Parse(Session["quanxian"].ToString()) == 2)
+            {
+                Response.Redirect("Baobiao2.aspx");
+            }
+            if (int.Parse(Session["quanxian"].ToString()) == 3)
+            {
+                Response.Redirect("Baobiao3.aspx");
+            }
+        }
     }
 }

@@ -11,7 +11,7 @@ namespace System003
 {
 
 
-    public partial class Baobiao
+    public partial class Baobiao21
     {
     }
 }

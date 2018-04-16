@@ -32,7 +32,7 @@
         <asp:Button ID="Button10" runat="server" PostBackUrl="~/Ruku.aspx" Text="入库" />
         <asp:Button ID="Button1" runat="server" PostBackUrl="~/Diaobo.aspx" Text="调拨" />
         <asp:Button ID="Button2" runat="server" PostBackUrl="~/Chaxun.aspx" Text="查询" />
-        <asp:Button ID="Button3" runat="server" PostBackUrl="~/Baobiao.aspx" Text="报表" />
+        <asp:Button ID="Button3" runat="server" Text="报表" OnClick="Button3_Click" />
         <asp:Button ID="Button4" runat="server" Text="开卡" OnClick="Button4_Click" />
         <asp:Button ID="Button7" runat="server" PostBackUrl="~/Wode.aspx" Text="我的" />
         <asp:Button ID="Button9" runat="server" PostBackUrl="~/Wodedenglu.aspx" Text="登录" Visible="False" />
