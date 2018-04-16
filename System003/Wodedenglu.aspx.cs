@@ -34,7 +34,7 @@ namespace System003
                     Label3.Text += sqldr[0];
                 }
                 sqldr.Close();//关闭SqlDataReader对象
-                if (TextBox2.Text == Label3.Text)
+                if (TextBox2.Text == Label3.Text && TextBox2.Text != "")
                 {
                     SqlCommand sqlcmd2 = new SqlCommand("insert into aspnet_Dengluzhe values ('" + str + "','1');", sqlcon);
                     //使用ExecuteReader方法的返回值创建SqlDataReader对象
@@ -65,7 +65,7 @@ namespace System003
                     Label3.Text += sqldr[0];
                 }
                 sqldr.Close();//关闭SqlDataReader对象
-                if (TextBox2.Text == Label3.Text)
+                if (TextBox2.Text == Label3.Text && TextBox2.Text != "")
                 {
                     SqlCommand sqlcmd2 = new SqlCommand("insert into aspnet_Dengluzhe values ('" + str + "','2');", sqlcon);
                     //使用ExecuteReader方法的返回值创建SqlDataReader对象
@@ -104,7 +104,7 @@ namespace System003
                 }
                 else
                 {
-                    Response.Write("<script>window.alert('登陆失败，请检查客户经理OA及密码输入是否正确！');location.href='Wodedenglu.aspx';</script>");
+                    Response.Write("<script>window.alert('登陆失败，请检查密码输入是否正确！');location.href='Wodedenglu.aspx';</script>");
                 }
                 sqlcon.Close();//关闭数据库连接
             }

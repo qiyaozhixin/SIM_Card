@@ -13,10 +13,10 @@
     <br />
     <asp:Label ID="Label3" runat="server" Text="所在部门"></asp:Label>
     <asp:DropDownList ID="DropDownList1" runat="server" AutoPostBack="True">
-        <asp:ListItem>A部门</asp:ListItem>
-        <asp:ListItem>B部门</asp:ListItem>
-        <asp:ListItem>C部门</asp:ListItem>
-        <asp:ListItem>D部门</asp:ListItem>
+        <asp:ListItem>部门01</asp:ListItem>
+        <asp:ListItem>部门02</asp:ListItem>
+        <asp:ListItem>部门03</asp:ListItem>
+        <asp:ListItem>部门04</asp:ListItem>
     </asp:DropDownList>
     <br />
     <asp:Button ID="Button8" runat="server" Text="注册" OnClick="Button8_Click" />
