@@ -97,7 +97,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Baobiao2.aspx" />
+    <Content Include="Baobiao.aspx" />
     <Content Include="Baobiaoxiaoshou.aspx" />
     <Content Include="Baobiaoyuliang.aspx" />
     <Content Include="Chaxun.aspx" />
@@ -139,7 +139,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Baobiao.aspx" />
     <Content Include="Chaxun2.aspx" />
     <Content Include="Default.aspx" />
     <Content Include="Diaobo.aspx" />
@@ -156,13 +155,6 @@
     </Compile>
     <Compile Include="Baobiao.aspx.designer.cs">
       <DependentUpon>Baobiao.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Baobiao2.aspx.cs">
-      <DependentUpon>Baobiao2.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Baobiao2.aspx.designer.cs">
-      <DependentUpon>Baobiao2.aspx</DependentUpon>
     </Compile>
     <Compile Include="Baobiaoxiaoshou.aspx.cs">
       <DependentUpon>Baobiaoxiaoshou.aspx</DependentUpon>
