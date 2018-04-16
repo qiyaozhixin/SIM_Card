@@ -94,5 +94,21 @@ namespace System003
 
             }
         }
+
+        protected void Button9_Click(object sender, EventArgs e)
+        {
+            if (int.Parse(Session["quanxian"].ToString()) == 1)
+            {
+                Response.Redirect("Baobiao.aspx");
+            }
+            if (int.Parse(Session["quanxian"].ToString()) == 2)
+            {
+                Response.Redirect("Baobiao2.aspx");
+            }
+            if (int.Parse(Session["quanxian"].ToString()) == 3)
+            {
+                Response.Redirect("Baobiao3.aspx");
+            }
+        }
     }
 }

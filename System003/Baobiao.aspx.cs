@@ -11,7 +11,20 @@ namespace System003
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            
+        }
 
+        protected void Button11_Click(object sender, EventArgs e)
+        {
+            Session["yuangongoa_baobiao"] = Session["dangqiandenglu"];
+            if (DropDownList1.Text == "销售报表")
+            {
+                Response.Redirect("Baobiaoxiaoshou.aspx");
+            }
+            else
+            {
+                Response.Redirect("Baobiaoyuliang.aspx");
+            }
         }
     }
 }
