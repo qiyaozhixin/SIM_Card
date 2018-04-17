@@ -31,10 +31,10 @@ namespace System003
                 SqlDataReader sqldr = sqlcmd.ExecuteReader();
                 while (sqldr.Read())
                 {
-                    Label3.Text += sqldr[0];
+                    Session["password"] = sqldr[0];
                 }
                 sqldr.Close();//关闭SqlDataReader对象
-                if (TextBox2.Text == Label3.Text && TextBox2.Text != "")
+                if (TextBox2.Text == Convert.ToString(Session["password"]) && TextBox2.Text != "")
                 {
                     SqlCommand sqlcmd2 = new SqlCommand("insert into aspnet_Dengluzhe values ('" + str + "','1');", sqlcon);
                     //使用ExecuteReader方法的返回值创建SqlDataReader对象
@@ -62,10 +62,10 @@ namespace System003
                 SqlDataReader sqldr = sqlcmd.ExecuteReader();
                 while (sqldr.Read())
                 {
-                    Label3.Text += sqldr[0];
+                    Session["password"] = sqldr[0];
                 }
                 sqldr.Close();//关闭SqlDataReader对象
-                if (TextBox2.Text == Label3.Text && TextBox2.Text != "")
+                if (TextBox2.Text == Convert.ToString(Session["password"]) && TextBox2.Text != "")
                 {
                     SqlCommand sqlcmd2 = new SqlCommand("insert into aspnet_Dengluzhe values ('" + str + "','2');", sqlcon);
                     //使用ExecuteReader方法的返回值创建SqlDataReader对象
@@ -91,10 +91,10 @@ namespace System003
                 SqlDataReader sqldr = sqlcmd.ExecuteReader();
                 while (sqldr.Read())
                 {
-                    Label3.Text += sqldr[0];
+                    Session["password"] = sqldr[0];
                 }
                 sqldr.Close();//关闭SqlDataReader对象
-                if (TextBox2.Text == Label3.Text)
+                if (TextBox2.Text == Convert.ToString(Session["password"]))
                 {
                     SqlCommand sqlcmd2 = new SqlCommand("insert into aspnet_Dengluzhe values ('boss','3');", sqlcon);
                     //使用ExecuteReader方法的返回值创建SqlDataReader对象
@@ -108,6 +108,7 @@ namespace System003
                 }
                 sqlcon.Close();//关闭数据库连接
             }
+           Session.Remove("password");
         }
     }
 }

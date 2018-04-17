@@ -25,6 +25,10 @@ namespace System003
                 {
                     sqlcon.Open();                              //打开数据库连接
                 }
+                if(TextBox1.Text == "")
+                {
+                    Response.Write("<script>window.alert('请输入员工OA!');location.href='Wodezhuce.aspx';</script>");
+                }
                 SqlCommand sqlcmd = new SqlCommand("insert into aspnet_Yuangongtest values('" + TextBox1.Text + "','" + TextBox3.Text + "','" + DropDownList1.Text + "','" + TextBox2.Text + "',null)", sqlcon);
                 SqlDataReader sqldr = sqlcmd.ExecuteReader();
                 Response.Write("<script>window.alert('注册成功!');location.href='Default.aspx';</script>");
@@ -33,7 +37,7 @@ namespace System003
             }
             catch
             {
-                Response.Write("<script>window.alert('注册失败,此员工已完成注册!');location.href='Wodezhuce.aspx';</script>");
+                Response.Write("<script>window.alert('注册失败,此员工已完成注册或注册信息有误!');location.href='Wodezhuce.aspx';</script>");
             }
         }
     }

@@ -54,6 +54,7 @@ namespace System003
             if (int.Parse(Session["quanxian"].ToString()) == 3)//有登陆
             {
                 Button8.Visible = true;
+                Button11.Visible = true;
             }
             else if(int.Parse(Session["quanxian"].ToString()) == 2)
             {
@@ -75,6 +76,7 @@ namespace System003
                 Button7.Visible = false;
                 Button10.Visible = false;
                 Button9.Visible = true;
+                Button11.Visible = false;
             }
             sqldr.Close();//关闭SqlDataReader对象
             sqlcon.Close();//关闭数据库连接
