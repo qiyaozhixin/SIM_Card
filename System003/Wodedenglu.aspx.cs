@@ -49,7 +49,7 @@ namespace System003
                 sqlcon.Close();//关闭数据库连接
             }
 
-            else if (DropDownList1.Text == "地推网点经理登录")
+            else if (DropDownList1.Text == "地推网点或部门经理登录")
             {
                 string str = TextBox1.Text;
                 SqlConnection sqlcon = new SqlConnection("server=PC-201401242045;database=aspnetdb;uid=sa;pwd=ppzsppzs;");//创建数据库连接对象

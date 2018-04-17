@@ -2,10 +2,6 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolderMain" runat="server">
-    <asp:DropDownList ID="DropDownList2" runat="server" AutoPostBack="True">
-        <asp:ListItem>员工直销</asp:ListItem>
-        <asp:ListItem>地推网点</asp:ListItem>
-    </asp:DropDownList>
     <asp:DropDownList ID="DropDownList1" runat="server" AutoPostBack="True">
         <asp:ListItem>销售报表</asp:ListItem>
         <asp:ListItem>余量报表</asp:ListItem>
