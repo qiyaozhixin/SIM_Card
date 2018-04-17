@@ -18,53 +18,109 @@ namespace System003
                 //调用自定义方法绑定数据到控件
                 BindData();
 
-                SqlConnection sqlcon = new SqlConnection("server=PC-201401242045;database=aspnetdb;uid=sa;pwd=ppzsppzs;");//创建数据库连接对象                                                                                                                          //创建SqlCommand对象
-                SqlCommand sqlcmd = new SqlCommand("select * from aspnet_Cardtest where 当前库位 = '" + Session["dangqiandenglu"] + "' and 卡状态 <> 1", sqlcon);
-                if (sqlcon.State == ConnectionState.Closed)     //判断连接是否关闭
+                if (int.Parse(Session["quanxian"].ToString()) == 3)
                 {
-                    sqlcon.Open();                              //打开数据库连接
+                    SqlConnection sqlcon = new SqlConnection("server=PC-201401242045;database=aspnetdb;uid=sa;pwd=ppzsppzs;");//创建数据库连接对象                                                                                                                          //创建SqlCommand对象
+                    SqlCommand sqlcmd = new SqlCommand("select * from aspnet_Cardtest where 卡状态 <> 1", sqlcon);
+                    if (sqlcon.State == ConnectionState.Closed)     //判断连接是否关闭
+                    {
+                        sqlcon.Open();                              //打开数据库连接
+                    }
+                    //使用ExecuteReader方法的返回值创建SqlDataReader对象
+                    SqlDataReader sqldr = sqlcmd.ExecuteReader();
+                    if (sqldr.HasRows)
+                    {
+
+                    }
+                    else
+                    {
+                        Response.Write("<script>window.alert('当前库位中没有可调拨的电话卡！');location.href='Default.aspx';</script>");
+                    }
+                    sqldr.Close();//关闭SqlDataReader对象
+                    sqlcon.Close();//关闭数据库连接
                 }
-                //使用ExecuteReader方法的返回值创建SqlDataReader对象
-                SqlDataReader sqldr = sqlcmd.ExecuteReader();
-                if (sqldr.HasRows)
+                else if (int.Parse(Session["quanxian"].ToString()) == 2)
                 {
 
                 }
-                else
+                else if (int.Parse(Session["quanxian"].ToString()) == 1)
                 {
-                    Response.Write("<script>window.alert('当前库位中没有可调拨的电话卡！');location.href='Default.aspx';</script>");
+
                 }
-                sqldr.Close();//关闭SqlDataReader对象
-                sqlcon.Close();//关闭数据库连接
+                //SqlConnection sqlcon = new SqlConnection("server=PC-201401242045;database=aspnetdb;uid=sa;pwd=ppzsppzs;");//创建数据库连接对象                                                                                                                          //创建SqlCommand对象
+                //SqlCommand sqlcmd = new SqlCommand("select * from aspnet_Cardtest where 当前库位 = '" + Session["dangqiandenglu"] + "' and 卡状态 <> 1", sqlcon);
+                //if (sqlcon.State == ConnectionState.Closed)     //判断连接是否关闭
+                //{
+                //    sqlcon.Open();                              //打开数据库连接
+                //}
+                ////使用ExecuteReader方法的返回值创建SqlDataReader对象
+                //SqlDataReader sqldr = sqlcmd.ExecuteReader();
+                //if (sqldr.HasRows)
+                //{
+
+                //}
+                //else
+                //{
+                //    Response.Write("<script>window.alert('当前库位中没有可调拨的电话卡！');location.href='Default.aspx';</script>");
+                //}
+                //sqldr.Close();//关闭SqlDataReader对象
+                //sqlcon.Close();//关闭数据库连接
             }
         }
 
         public void BindData()
         {
-            //定义执行查询操作的SQL语句
-            string sqlstr = "select * from aspnet_Yuangongtest where 员工OA <> '" + Session["dangqiandenglu"] + "'";
-            //创建数据库连接对象
-            SqlConnection con = new SqlConnection("server=PC-201401242045;database=aspnetdb;uid=sa;pwd=ppzsppzs;");
-            //创建数据适配器
-            SqlDataAdapter da = new SqlDataAdapter(sqlstr, con);
-            //创建数据集
-            DataSet ds = new DataSet();
-            //填充数据集
-            da.Fill(ds);
-            //设置GridView控件的数据源为创建的数据集ds
-            GridView1.DataSource = ds;
-            //将数据库表中的主键字段放入GridView控件的DataKeyNames属性中
-            GridView1.DataKeyNames = new string[] { "员工OA" };
-            //绑定数据库表中数据
-            GridView1.DataBind();
+            if (int.Parse(Session["quanxian"].ToString()) == 3)
+            {
+                //定义执行查询操作的SQL语句
+                string sqlstr = "select * from aspnet_Yuangongtest";
+                //创建数据库连接对象
+                SqlConnection con = new SqlConnection("server=PC-201401242045;database=aspnetdb;uid=sa;pwd=ppzsppzs;");
+                //创建数据适配器
+                SqlDataAdapter da = new SqlDataAdapter(sqlstr, con);
+                //创建数据集
+                DataSet ds = new DataSet();
+                //填充数据集
+                da.Fill(ds);
+                //设置GridView控件的数据源为创建的数据集ds
+                GridView1.DataSource = ds;
+                //将数据库表中的主键字段放入GridView控件的DataKeyNames属性中
+                GridView1.DataKeyNames = new string[] { "员工OA" };
+                //绑定数据库表中数据
+                GridView1.DataBind();
+            }
+            else if (int.Parse(Session["quanxian"].ToString()) == 2)
+            {
+
+            }
+            else if (int.Parse(Session["quanxian"].ToString()) == 1)
+            {
+
+            }
+            ////定义执行查询操作的SQL语句
+            //string sqlstr = "select * from aspnet_Yuangongtest where 员工OA <> '" + Session["dangqiandenglu"] + "'";
+            ////创建数据库连接对象
+            //SqlConnection con = new SqlConnection("server=PC-201401242045;database=aspnetdb;uid=sa;pwd=ppzsppzs;");
+            ////创建数据适配器
+            //SqlDataAdapter da = new SqlDataAdapter(sqlstr, con);
+            ////创建数据集
+            //DataSet ds = new DataSet();
+            ////填充数据集
+            //da.Fill(ds);
+            ////设置GridView控件的数据源为创建的数据集ds
+            //GridView1.DataSource = ds;
+            ////将数据库表中的主键字段放入GridView控件的DataKeyNames属性中
+            //GridView1.DataKeyNames = new string[] { "员工OA" };
+            ////绑定数据库表中数据
+            //GridView1.DataBind();
         }
 
         protected void Button7_Click(object sender, EventArgs e)
         {
-            try
+            if (int.Parse(Session["quanxian"].ToString()) == 3)
             {
                 SqlConnection sqlcon = new SqlConnection("server=PC-201401242045;database=aspnetdb;uid=sa;pwd=ppzsppzs;");//创建数据库连接对象                                                                                                                         //创建SqlCommand对象
-                SqlCommand sqlcmd = new SqlCommand("select * from aspnet_Yuangongtest where 员工OA <> '" + Session["dangqiandenglu"] + "'", sqlcon);
+                SqlCommand sqlcmd = new SqlCommand("select * from aspnet_Yuangongtest", sqlcon);
                 if (sqlcon.State == ConnectionState.Closed)     //判断连接是否关闭
                 {
                     sqlcon.Open();                              //打开数据库连接
@@ -78,15 +134,33 @@ namespace System003
                 sqldr.Close();//关闭SqlDataReader对象
                 sqlcon.Close();//关闭数据库连接
             }
-            catch
+            else if (int.Parse(Session["quanxian"].ToString()) == 2)
             {
-                
+
             }
+            else if (int.Parse(Session["quanxian"].ToString()) == 1)
+            {
+
+            }
+            //SqlConnection sqlcon = new SqlConnection("server=PC-201401242045;database=aspnetdb;uid=sa;pwd=ppzsppzs;");//创建数据库连接对象                                                                                                                         //创建SqlCommand对象
+            //SqlCommand sqlcmd = new SqlCommand("select * from aspnet_Yuangongtest where 员工OA <> '" + Session["dangqiandenglu"] + "'", sqlcon);
+            //if (sqlcon.State == ConnectionState.Closed)     //判断连接是否关闭
+            //{
+            //    sqlcon.Open();                              //打开数据库连接
+            //}
+            ////使用ExecuteReader方法的返回值创建SqlDataReader对象
+            //SqlDataReader sqldr = sqlcmd.ExecuteReader();
+            //GridView1.DataSource = sqldr;
+            //GridView1.DataBind();
+            //GridView1.Visible = true;
+            //GridView2.Visible = false;
+            //sqldr.Close();//关闭SqlDataReader对象
+            //sqlcon.Close();//关闭数据库连接
         }
 
         protected void Button8_Click(object sender, EventArgs e)
         {
-            try
+            if (int.Parse(Session["quanxian"].ToString()) == 3)
             {
                 SqlConnection sqlcon = new SqlConnection("server=PC-201401242045;database=aspnetdb;uid=sa;pwd=ppzsppzs;");//创建数据库连接对象                                                                                                                         //创建SqlCommand对象
                 SqlCommand sqlcmd = new SqlCommand("select * from aspnet_Dituiwangdiantest where 客户经理OA <> '" + Session["dangqiandenglu"] + "'", sqlcon);
@@ -103,36 +177,74 @@ namespace System003
                 sqldr.Close();//关闭SqlDataReader对象
                 sqlcon.Close();//关闭数据库连接
             }
-            catch
+            else if (int.Parse(Session["quanxian"].ToString()) == 2)
             {
-
+                
             }
+            else if (int.Parse(Session["quanxian"].ToString()) == 1)
+            {
+                
+            }
+            //SqlConnection sqlcon = new SqlConnection("server=PC-201401242045;database=aspnetdb;uid=sa;pwd=ppzsppzs;");//创建数据库连接对象                                                                                                                         //创建SqlCommand对象
+            //SqlCommand sqlcmd = new SqlCommand("select * from aspnet_Dituiwangdiantest where 客户经理OA <> '" + Session["dangqiandenglu"] + "'", sqlcon);
+            //if (sqlcon.State == ConnectionState.Closed)     //判断连接是否关闭
+            //{
+            //    sqlcon.Open();                              //打开数据库连接
+            //}
+            ////使用ExecuteReader方法的返回值创建SqlDataReader对象
+            //SqlDataReader sqldr = sqlcmd.ExecuteReader();
+            //GridView2.DataSource = sqldr;
+            //GridView2.DataBind();
+            //GridView2.Visible = true;
+            //GridView1.Visible = false;
+            //sqldr.Close();//关闭SqlDataReader对象
+            //sqlcon.Close();//关闭数据库连接
         }
 
         protected void Button9_Click(object sender, EventArgs e)
         {
-            int check = 0;
-            for (int i = 0; i <= GridView1.Rows.Count - 1; i++)
+            if (int.Parse(Session["quanxian"].ToString()) == 3)
             {
-                CheckBox cbox = (CheckBox)GridView1.Rows[i].FindControl("CheckBox1");
-                if (cbox.Checked == true)
+                int check = 0;
+                for (int i = 0; i <= GridView1.Rows.Count - 1; i++)
                 {
-                    Session["kuwei_diaobo"] = GridView1.Rows[i].Cells[0].Text;
-                    check++;
+                    CheckBox cbox = (CheckBox)GridView1.Rows[i].FindControl("CheckBox1");
+                    if (cbox.Checked == true)
+                    {
+                        Session["kuwei_diaobo"] = GridView1.Rows[i].Cells[0].Text;
+                        check++;
+                    }
+                }
+                for (int j = 0; j <= GridView2.Rows.Count - 1; j++)
+                {
+                    CheckBox cbox2 = (CheckBox)GridView2.Rows[j].FindControl("CheckBox2");
+                    if (cbox2.Checked == true)
+                    {
+                        Session["kuwei_diaobo"] = GridView2.Rows[j].Cells[0].Text;
+                        check++;
+                    }
+                }
+                if (check == 1)
+                {
+                    Response.Redirect("Diaobo2.aspx");
+                }
+                else if (check == 0)
+                {
+                    Response.Write("<script>window.alert('请至少选择一名员工！');location.href='Diaobo.aspx';</script>");
+                }
+                else
+                {
+                    Response.Write("<script>window.alert('只能选择一名员工，请重新选择！');location.href='Diaobo.aspx';</script>");
                 }
             }
-            if (check == 1)
+            else if (int.Parse(Session["quanxian"].ToString()) == 2)
             {
-                Response.Redirect("Diaobo2.aspx");
+                
             }
-            else if (check == 0)
+            else if (int.Parse(Session["quanxian"].ToString()) == 1)
             {
-                Response.Write("<script>window.alert('请至少选择一名员工！');location.href='Diaobo.aspx';</script>");
-            }
-            else
-            {
-                Response.Write("<script>window.alert('只能选择一名员工，请重新选择！');location.href='Diaobo.aspx';</script>");
-            }
+
+            }          
         }
     }
 }
