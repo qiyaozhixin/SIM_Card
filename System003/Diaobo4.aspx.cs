@@ -49,6 +49,7 @@ namespace System003
                 Label6.Text += Session["shengqingshijian_diaobo"];
                 Session.Remove("kuwei_diaobo");
                 Session.Remove("shengqingshijian_diaobo");
+                Session.Remove("manager_diaobo");
             }
             catch
             {

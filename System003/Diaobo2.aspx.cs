@@ -62,6 +62,25 @@ namespace System003
                     //绑定数据库表中数据
                     GridView1.DataBind();
                 }
+                else
+                {
+                    //定义执行查询操作的SQL语句
+                    string sqlstr = "select * from aspnet_Cardtest where 卡状态 <> 1 and (当前库位 IN (select 员工OA from aspnet_Yuangongtest where 所在部门 IN (select 网点名称 from aspnet_Dituiwangdiantest where 客户经理OA = '" + Session["dangqiandenglu"] + "')) or 当前库位 = '" + Session["dangqiandenglu"] + "') and 当前库位 <> '" + Session["kuwei_diaobo"] + "'";
+                    //创建数据库连接对象
+                    SqlConnection con = new SqlConnection("server=PC-201401242045;database=aspnetdb;uid=sa;pwd=ppzsppzs;");
+                    //创建数据适配器
+                    SqlDataAdapter da = new SqlDataAdapter(sqlstr, con);
+                    //创建数据集
+                    DataSet ds = new DataSet();
+                    //填充数据集
+                    da.Fill(ds);
+                    //设置GridView控件的数据源为创建的数据集ds
+                    GridView1.DataSource = ds;
+                    //将数据库表中的主键字段放入GridView控件的DataKeyNames属性中
+                    GridView1.DataKeyNames = new string[] { "ICCID" };
+                    //绑定数据库表中数据
+                    GridView1.DataBind();
+                }
             }
             else if (int.Parse(Session["quanxian"].ToString()) == 1)
             {
