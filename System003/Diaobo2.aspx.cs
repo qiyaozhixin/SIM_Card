@@ -40,6 +40,10 @@ namespace System003
                 GridView1.DataKeyNames = new string[] { "ICCID" };
                 //绑定数据库表中数据
                 GridView1.DataBind();
+                if (ds.Tables.Count == 1 && ds.Tables[0].Rows.Count == 0)
+                {
+                    Response.Write("<script>window.alert('无法选择这名员工，所有的卡都在这名员工的库里！');location.href='Diaobo.aspx';</script>");
+                }
             }
             else if (int.Parse(Session["quanxian"].ToString()) == 2)
             {
@@ -80,6 +84,10 @@ namespace System003
                     GridView1.DataKeyNames = new string[] { "ICCID" };
                     //绑定数据库表中数据
                     GridView1.DataBind();
+                    if (ds.Tables.Count == 1 && ds.Tables[0].Rows.Count == 0)
+                    {
+                        Response.Write("<script>window.alert('无法选择这名员工，所有的卡都在这名员工的库里！');location.href='Diaobo.aspx';</script>");
+                    }
                 }
             }
             else if (int.Parse(Session["quanxian"].ToString()) == 1)
