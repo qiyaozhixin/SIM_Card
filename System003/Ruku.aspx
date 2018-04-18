@@ -9,4 +9,6 @@
     <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
     <br />
     <asp:Button ID="Button11" runat="server" Text="确定" OnClick="Button11_Click" />
+    <br />
+    <asp:Button ID="Button12" runat="server" Text="批量导入" PostBackUrl="~/Ruku2.aspx" />
 </asp:Content>
