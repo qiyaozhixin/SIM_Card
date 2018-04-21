@@ -195,6 +195,7 @@
     <Content Include="Wodedenglu.aspx" />
     <Content Include="Wodedenglu_new.aspx" />
     <Content Include="Wodezhuce.aspx" />
+    <None Include="Properties\PublishProfiles\web.config.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
