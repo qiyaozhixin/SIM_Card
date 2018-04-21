@@ -28,29 +28,19 @@
             <div class="well well-lg">
                 <label for="name">类别</label>
                 <div class="form-group">
-                    <select id="lunchBegins" class="selectpicker" title="请选择部门">
+                    <select id="choosedepartment" class="selectpicker" title="请选择部门">
                         <option>普通员工</option>
                         <option>部门经理</option>
                         <option>地推网点经理</option>
                         <option>总经理</option>
                     </select>
                 </div>
-                <%--<div class="btn-group">
-	                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"> <span class="caret"></span>
-                    </button>
-	                    <ul class="dropdown-menu" role="menu">
-		                     <li><a href="#">普通员工</a></li>
-		                     <li><a href="#">部门经理</a></li>
-		                     <li><a href="#">地推网点经理</a></li>
-		                     <li><a href="#">总经理</a></li>
-	                    </ul>
-                </div>--%>
                 <div class="form-group">
-		             <label for="name">OA</label> 
+		             <label for="OA">OA</label> 
                      <input type="text" class="form-control" id="name" placeholder="请输入OA" />
 	            </div>
                 <div class="form-group">
-		             <label for="name">密码</label>
+		             <label for="password">密码</label>
 		             <input type="password" class="form-control" id="password" placeholder="请输入密码" />
 	            </div>
                 <button type="submit" class="btn btn-default">登录</button>
