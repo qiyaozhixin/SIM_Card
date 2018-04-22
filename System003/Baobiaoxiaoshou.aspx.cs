@@ -15,6 +15,10 @@ namespace System003
         {
             try
             {
+                if (Convert.ToString(Session["quanxian"]) == "")
+                {
+                    Response.Write("<script>window.alert('违规操作！');location.href='Default.aspx';</script>");
+                }
                 if (Convert.ToString(Session["yuangongoa_baobiao"]) != "")
                 {
                     SqlConnection sqlcon = new SqlConnection("server=PC-201401242045;database=aspnetdb;uid=sa;pwd=ppzsppzs;");//创建数据库连接对象

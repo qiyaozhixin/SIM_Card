@@ -17,8 +17,11 @@ namespace System003
             {
                 //调用自定义方法绑定数据到控件
                 BindData();
-
-                if (int.Parse(Session["quanxian"].ToString()) == 1)
+                if (Convert.ToString(Session["quanxian"]) == "")
+                {
+                    Response.Write("<script>window.alert('违规操作！');location.href='Default.aspx';</script>");
+                }
+                else if (int.Parse(Session["quanxian"].ToString()) == 1)
                 {
                     SqlConnection sqlcon = new SqlConnection("server=PC-201401242045;database=aspnetdb;uid=sa;pwd=ppzsppzs;");//创建数据库连接对象                                                                                                                          //创建SqlCommand对象
                     SqlCommand sqlcmd = new SqlCommand("select * from aspnet_Cardtest where 当前库位 = '" + Session["dangqiandenglu"] + "' and 卡状态 <> 1", sqlcon);
@@ -40,7 +43,7 @@ namespace System003
                     sqlcon.Close();//关闭数据库连接
                 }
 
-                if (int.Parse(Session["quanxian"].ToString()) == 2)
+                else if (int.Parse(Session["quanxian"].ToString()) == 2)
                 {
                     SqlConnection sqlcon = new SqlConnection("server=PC-201401242045;database=aspnetdb;uid=sa;pwd=ppzsppzs;");//创建数据库连接对象                                                                                                                          //创建SqlCommand对象
                     SqlCommand sqlcmd = new SqlCommand("select * from aspnet_Cardtest where (当前库位 IN ( select 员工OA from aspnet_Yuangongtest where 所在部门 IN (select 网点名称 from aspnet_Dituiwangdiantest where 客户经理OA = '" + Session["dangqiandenglu"] + "')) or 当前库位 = '" + Session["dangqiandenglu"] + "') and 卡状态 <> 1;", sqlcon);
@@ -62,7 +65,7 @@ namespace System003
                     sqlcon.Close();//关闭数据库连接
                 }
 
-                if (int.Parse(Session["quanxian"].ToString()) == 3)
+                else if (int.Parse(Session["quanxian"].ToString()) == 3)
                 {
                     SqlConnection sqlcon = new SqlConnection("server=PC-201401242045;database=aspnetdb;uid=sa;pwd=ppzsppzs;");//创建数据库连接对象                                                                                                                          //创建SqlCommand对象
                     SqlCommand sqlcmd = new SqlCommand("select * from aspnet_Cardtest where 卡状态 <> 1", sqlcon);
@@ -88,7 +91,11 @@ namespace System003
 
         public void BindData()
         {
-            if (int.Parse(Session["quanxian"].ToString()) == 1)
+            if (Convert.ToString(Session["quanxian"]) == "")
+            {
+                Response.Write("<script>window.alert('违规操作！');location.href='Default.aspx';</script>");
+            }
+            else if (int.Parse(Session["quanxian"].ToString()) == 1)
             {
                 //定义执行查询操作的SQL语句
                 string sqlstr = "select * from aspnet_Cardtest where 当前库位 = '" + Session["dangqiandenglu"] + "' and 卡状态 <> 1;";
@@ -108,7 +115,7 @@ namespace System003
                 GridView1.DataBind();
             }
 
-            if (int.Parse(Session["quanxian"].ToString()) == 2)
+            else if (int.Parse(Session["quanxian"].ToString()) == 2)
             {
                 //定义执行查询操作的SQL语句
                 string sqlstr = "select * from aspnet_Cardtest where (当前库位 IN ( select 员工OA from aspnet_Yuangongtest where 所在部门 IN (select 网点名称 from aspnet_Dituiwangdiantest where 客户经理OA = '" + Session["dangqiandenglu"] + "')) or 当前库位 = '" + Session["dangqiandenglu"] + "') and 卡状态 <> 1;";
@@ -129,7 +136,7 @@ namespace System003
                 GridView1.DataBind();
             }
 
-            if (int.Parse(Session["quanxian"].ToString()) == 3)
+            else if (int.Parse(Session["quanxian"].ToString()) == 3)
             {
                 //定义执行查询操作的SQL语句
                 string sqlstr = "select * from aspnet_Cardtest where 卡状态 <> 1;";

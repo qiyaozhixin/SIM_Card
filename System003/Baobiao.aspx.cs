@@ -11,7 +11,10 @@ namespace System003
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            
+            if (Convert.ToString(Session["quanxian"]) == "")
+            {
+                Response.Write("<script>window.alert('违规操作！');location.href='Default.aspx';</script>");
+            }
         }
 
         protected void Button11_Click(object sender, EventArgs e)

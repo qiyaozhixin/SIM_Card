@@ -19,8 +19,11 @@ namespace System003
             {
                 //调用自定义方法绑定数据到控件
                 BindData();
-
-                if (int.Parse(Session["quanxian"].ToString()) == 3)
+                if (Convert.ToString(Session["quanxian"]) == "")
+                {
+                    Response.Write("<script>window.alert('违规操作！');location.href='Default.aspx';</script>");
+                }
+                else if (int.Parse(Session["quanxian"].ToString()) == 3)
                 {
                     SqlConnection sqlcon = new SqlConnection("server=PC-201401242045;database=aspnetdb;uid=sa;pwd=ppzsppzs;");//创建数据库连接对象                                                                                                                          //创建SqlCommand对象
                     SqlCommand sqlcmd = new SqlCommand("select * from aspnet_Cardtest where 卡状态 <> 1", sqlcon);
@@ -130,7 +133,11 @@ namespace System003
 
         public void BindData()
         {
-            if (int.Parse(Session["quanxian"].ToString()) == 3)
+            if (Convert.ToString(Session["quanxian"]) == "")
+            {
+                Response.Write("<script>window.alert('违规操作！');location.href='Default.aspx';</script>");
+            }
+            else if (int.Parse(Session["quanxian"].ToString()) == 3)
             {
                 //定义执行查询操作的SQL语句
                 string sqlstr = "select * from aspnet_Yuangongtest";

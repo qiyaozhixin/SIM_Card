@@ -20,6 +20,10 @@ namespace System003
         {
             try
             {
+                if (Convert.ToString(Session["quanxian"]) == "")
+                {
+                    Response.Write("<script>window.alert('违规操作！');location.href='Default.aspx';</script>");
+                }
                 Label1.Text += Session["kuwei_diaobo"];
                 SqlConnection sqlcon = new SqlConnection("server=PC-201401242045;database=aspnetdb;uid=sa;pwd=ppzsppzs;");//创建数据库连接对象
                 if (sqlcon.State == ConnectionState.Closed)     //判断连接是否关闭

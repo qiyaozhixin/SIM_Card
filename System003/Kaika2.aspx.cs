@@ -13,6 +13,10 @@ namespace System003
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Convert.ToString(Session["quanxian"]) == "")
+            {
+                Response.Write("<script>window.alert('违规操作！');location.href='Default.aspx';</script>");
+            }
             Label6.Text += Session["iccid_kaika"];
             Label8.Text += Session["PUKma_kaika"];
             Label10.Text += Session["IDnumber_kaika"];

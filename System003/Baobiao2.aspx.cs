@@ -13,6 +13,10 @@ namespace System003
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Convert.ToString(Session["quanxian"]) == "")
+            {
+                Response.Write("<script>window.alert('违规操作！');location.href='Default.aspx';</script>");
+            }
             SqlConnection sqlcon = new SqlConnection("server=PC-201401242045;database=aspnetdb;uid=sa;pwd=ppzsppzs;");//创建数据库连接对象
             if (sqlcon.State == ConnectionState.Closed)     //判断连接是否关闭
             {
