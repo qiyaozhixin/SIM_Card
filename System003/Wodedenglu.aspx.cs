@@ -21,7 +21,7 @@ namespace System003
             if (DropDownList1.Text == "员工登录")
             {
                 string str = TextBox1.Text;
-                SqlConnection sqlcon = new SqlConnection("server=PC-201401242045;database=aspnetdb;uid=sa;pwd=ppzsppzs;");//创建数据库连接对象
+                SqlConnection sqlcon = new SqlConnection("server=PC-201401242045;database=aspnetdb;uid=sa;pwd=123456;");//创建数据库连接对象
                 if (sqlcon.State == ConnectionState.Closed)     //判断连接是否关闭
                 {
                     sqlcon.Open();                              //打开数据库连接
@@ -52,7 +52,7 @@ namespace System003
             else if (DropDownList1.Text == "地推网点或部门经理登录")
             {
                 string str = TextBox1.Text;
-                SqlConnection sqlcon = new SqlConnection("server=PC-201401242045;database=aspnetdb;uid=sa;pwd=ppzsppzs;");//创建数据库连接对象
+                SqlConnection sqlcon = new SqlConnection("server=PC-201401242045;database=aspnetdb;uid=sa;pwd=123456;");//创建数据库连接对象
                 if (sqlcon.State == ConnectionState.Closed)     //判断连接是否关闭
                 {
                     sqlcon.Open();                              //打开数据库连接
@@ -82,7 +82,7 @@ namespace System003
 
             else
             {
-                SqlConnection sqlcon = new SqlConnection("server=PC-201401242045;database=aspnetdb;uid=sa;pwd=ppzsppzs;");//创建数据库连接对象
+                SqlConnection sqlcon = new SqlConnection("server=PC-201401242045;database=aspnetdb;uid=sa;pwd=123456;");//创建数据库连接对象
                 if (sqlcon.State == ConnectionState.Closed)     //判断连接是否关闭
                 {
                     sqlcon.Open();                              //打开数据库连接

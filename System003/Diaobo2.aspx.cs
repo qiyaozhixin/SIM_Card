@@ -31,7 +31,7 @@ namespace System003
                 //定义执行查询操作的SQL语句
                 string sqlstr = "select * from aspnet_Cardtest where 当前库位 <> '" + Session["kuwei_diaobo"] + "' and 卡状态 <> 1;";
                 //创建数据库连接对象
-                SqlConnection con = new SqlConnection("server=PC-201401242045;database=aspnetdb;uid=sa;pwd=ppzsppzs;");
+                SqlConnection con = new SqlConnection("server=PC-201401242045;database=aspnetdb;uid=sa;pwd=123456;");
                 //创建数据适配器
                 SqlDataAdapter da = new SqlDataAdapter(sqlstr, con);
                 //创建数据集
@@ -56,7 +56,7 @@ namespace System003
                     //定义执行查询操作的SQL语句
                     string sqlstr = "select * from aspnet_Cardtest where 当前库位 = '" + Session["dangqiandenglu"] + "' and 卡状态 <> 1;";
                     //创建数据库连接对象
-                    SqlConnection con = new SqlConnection("server=PC-201401242045;database=aspnetdb;uid=sa;pwd=ppzsppzs;");
+                    SqlConnection con = new SqlConnection("server=PC-201401242045;database=aspnetdb;uid=sa;pwd=123456;");
                     //创建数据适配器
                     SqlDataAdapter da = new SqlDataAdapter(sqlstr, con);
                     //创建数据集
@@ -75,7 +75,7 @@ namespace System003
                     //定义执行查询操作的SQL语句
                     string sqlstr = "select * from aspnet_Cardtest where 卡状态 <> 1 and (当前库位 IN (select 员工OA from aspnet_Yuangongtest where 所在部门 IN (select 网点名称 from aspnet_Dituiwangdiantest where 客户经理OA = '" + Session["dangqiandenglu"] + "')) or 当前库位 = '" + Session["dangqiandenglu"] + "') and 当前库位 <> '" + Session["kuwei_diaobo"] + "'";
                     //创建数据库连接对象
-                    SqlConnection con = new SqlConnection("server=PC-201401242045;database=aspnetdb;uid=sa;pwd=ppzsppzs;");
+                    SqlConnection con = new SqlConnection("server=PC-201401242045;database=aspnetdb;uid=sa;pwd=123456;");
                     //创建数据适配器
                     SqlDataAdapter da = new SqlDataAdapter(sqlstr, con);
                     //创建数据集
@@ -99,7 +99,7 @@ namespace System003
                 //定义执行查询操作的SQL语句
                 string sqlstr = "select * from aspnet_Cardtest where 当前库位 = '" + Session["dangqiandenglu"] + "' and 卡状态 <> 1;";
                 //创建数据库连接对象
-                SqlConnection con = new SqlConnection("server=PC-201401242045;database=aspnetdb;uid=sa;pwd=ppzsppzs;");
+                SqlConnection con = new SqlConnection("server=PC-201401242045;database=aspnetdb;uid=sa;pwd=123456;");
                 //创建数据适配器
                 SqlDataAdapter da = new SqlDataAdapter(sqlstr, con);
                 //创建数据集
@@ -116,7 +116,7 @@ namespace System003
             ////定义执行查询操作的SQL语句
             //string sqlstr = "select * from aspnet_Cardtest where 当前库位 = '" + Session["dangqiandenglu"] + "' and 卡状态 <> 1;";
             ////创建数据库连接对象
-            //SqlConnection con = new SqlConnection("server=PC-201401242045;database=aspnetdb;uid=sa;pwd=ppzsppzs;");
+            //SqlConnection con = new SqlConnection("server=PC-201401242045;database=aspnetdb;uid=sa;pwd=123456;");
             ////创建数据适配器
             //SqlDataAdapter da = new SqlDataAdapter(sqlstr, con);
             ////创建数据集
@@ -133,7 +133,7 @@ namespace System003
 
         protected void Button7_Click(object sender, EventArgs e)
         {
-            SqlConnection sqlcon2 = new SqlConnection("server=PC-201401242045;database=aspnetdb;uid=sa;pwd=ppzsppzs;");//创建数据库连接对象                                                                                                                     //创建SqlCommand对象
+            SqlConnection sqlcon2 = new SqlConnection("server=PC-201401242045;database=aspnetdb;uid=sa;pwd=123456;");//创建数据库连接对象                                                                                                                     //创建SqlCommand对象
             SqlCommand sqlcmd2 = new SqlCommand("delete from aspnet_Linshika", sqlcon2);
             if (sqlcon2.State == ConnectionState.Closed)     //判断连接是否关闭
             {
@@ -151,7 +151,7 @@ namespace System003
                 if (cbox.Checked == true)
                 {
                     string str = GridView1.Rows[i].Cells[0].Text;//获取想要的行
-                    SqlConnection sqlcon = new SqlConnection("server=PC-201401242045;database=aspnetdb;uid=sa;pwd=ppzsppzs;");//创建数据库连接对象
+                    SqlConnection sqlcon = new SqlConnection("server=PC-201401242045;database=aspnetdb;uid=sa;pwd=123456;");//创建数据库连接对象
                     if (sqlcon.State == ConnectionState.Closed)     //判断连接是否关闭
                     {
                         sqlcon.Open();                              //打开数据库连接

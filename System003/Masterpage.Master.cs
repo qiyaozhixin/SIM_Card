@@ -14,7 +14,7 @@ namespace System003
         protected void Page_Load(object sender, EventArgs e)
         {
             Session["quanxian"] = 0;
-            SqlConnection sqlcon = new SqlConnection("server=PC-201401242045;database=aspnetdb;uid=sa;pwd=ppzsppzs;");//创建数据库连接对象                                                                                                                     //创建SqlCommand对象
+            SqlConnection sqlcon = new SqlConnection("server=PC-201401242045;database=aspnetdb;uid=sa;pwd=123456;");//创建数据库连接对象                                                                                                                     //创建SqlCommand对象
             SqlCommand sqlcmd = new SqlCommand("select OA from aspnet_Dengluzhe;select 权限 from aspnet_Dengluzhe", sqlcon);
             if (sqlcon.State == ConnectionState.Closed)     //判断连接是否关闭
             {
@@ -84,7 +84,7 @@ namespace System003
 
         protected void Button8_Click(object sender, EventArgs e)
         {
-            SqlConnection sqlcon = new SqlConnection("server=PC-201401242045;database=aspnetdb;uid=sa;pwd=ppzsppzs;");//创建数据库连接对象                                                                                                                    //创建SqlCommand对象
+            SqlConnection sqlcon = new SqlConnection("server=PC-201401242045;database=aspnetdb;uid=sa;pwd=123456;");//创建数据库连接对象                                                                                                                    //创建SqlCommand对象
             SqlCommand sqlcmd = new SqlCommand("delete from aspnet_Dengluzhe", sqlcon);
             if (sqlcon.State == ConnectionState.Closed)     //判断连接是否关闭
             {

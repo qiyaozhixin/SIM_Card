@@ -25,7 +25,7 @@ namespace System003
                 }
                 else if (int.Parse(Session["quanxian"].ToString()) == 3)
                 {
-                    SqlConnection sqlcon = new SqlConnection("server=PC-201401242045;database=aspnetdb;uid=sa;pwd=ppzsppzs;");//创建数据库连接对象                                                                                                                          //创建SqlCommand对象
+                    SqlConnection sqlcon = new SqlConnection("server=PC-201401242045;database=aspnetdb;uid=sa;pwd=123456;");//创建数据库连接对象                                                                                                                          //创建SqlCommand对象
                     SqlCommand sqlcmd = new SqlCommand("select * from aspnet_Cardtest where 卡状态 <> 1", sqlcon);
                     if (sqlcon.State == ConnectionState.Closed)     //判断连接是否关闭
                     {
@@ -48,7 +48,7 @@ namespace System003
                 {
                     if (Convert.ToString(Session["manager_diaobo"]) == "dituijingli")
                     {
-                        SqlConnection sqlcon = new SqlConnection("server=PC-201401242045;database=aspnetdb;uid=sa;pwd=ppzsppzs;");//创建数据库连接对象                                                                                                                          //创建SqlCommand对象
+                        SqlConnection sqlcon = new SqlConnection("server=PC-201401242045;database=aspnetdb;uid=sa;pwd=123456;");//创建数据库连接对象                                                                                                                          //创建SqlCommand对象
                         SqlCommand sqlcmd = new SqlCommand("select * from aspnet_Cardtest where 当前库位 = '" + Session["dangqiandenglu"] + "' and 卡状态 <> 1", sqlcon);
                         if (sqlcon.State == ConnectionState.Closed)     //判断连接是否关闭
                         {
@@ -69,7 +69,7 @@ namespace System003
                     }
                     else
                     {
-                        SqlConnection sqlcon = new SqlConnection("server=PC-201401242045;database=aspnetdb;uid=sa;pwd=ppzsppzs;");//创建数据库连接对象                                                                                                                          //创建SqlCommand对象
+                        SqlConnection sqlcon = new SqlConnection("server=PC-201401242045;database=aspnetdb;uid=sa;pwd=123456;");//创建数据库连接对象                                                                                                                          //创建SqlCommand对象
                         SqlCommand sqlcmd = new SqlCommand("select * from aspnet_Cardtest where 卡状态 <> 1 and (当前库位 IN (select 员工OA from aspnet_Yuangongtest where 所在部门 IN (select 网点名称 from aspnet_Dituiwangdiantest where 客户经理OA = '" + Session["dangqiandenglu"] + "')) or 当前库位 = '" + Session["dangqiandenglu"] + "')", sqlcon);
                         if (sqlcon.State == ConnectionState.Closed)     //判断连接是否关闭
                         {
@@ -91,7 +91,7 @@ namespace System003
                 }
                 else if (int.Parse(Session["quanxian"].ToString()) == 1)
                 {
-                    SqlConnection sqlcon = new SqlConnection("server=PC-201401242045;database=aspnetdb;uid=sa;pwd=ppzsppzs;");//创建数据库连接对象                                                                                                                          //创建SqlCommand对象
+                    SqlConnection sqlcon = new SqlConnection("server=PC-201401242045;database=aspnetdb;uid=sa;pwd=123456;");//创建数据库连接对象                                                                                                                          //创建SqlCommand对象
                     SqlCommand sqlcmd = new SqlCommand("select * from aspnet_Cardtest where 当前库位 = '" + Session["dangqiandenglu"] + "' and 卡状态 <> 1", sqlcon);
                     if (sqlcon.State == ConnectionState.Closed)     //判断连接是否关闭
                     {
@@ -110,7 +110,7 @@ namespace System003
                     sqldr.Close();//关闭SqlDataReader对象
                     sqlcon.Close();//关闭数据库连接
                 }
-                //SqlConnection sqlcon = new SqlConnection("server=PC-201401242045;database=aspnetdb;uid=sa;pwd=ppzsppzs;");//创建数据库连接对象                                                                                                                          //创建SqlCommand对象
+                //SqlConnection sqlcon = new SqlConnection("server=PC-201401242045;database=aspnetdb;uid=sa;pwd=123456;");//创建数据库连接对象                                                                                                                          //创建SqlCommand对象
                 //SqlCommand sqlcmd = new SqlCommand("select * from aspnet_Cardtest where 当前库位 = '" + Session["dangqiandenglu"] + "' and 卡状态 <> 1", sqlcon);
                 //if (sqlcon.State == ConnectionState.Closed)     //判断连接是否关闭
                 //{
@@ -142,7 +142,7 @@ namespace System003
                 //定义执行查询操作的SQL语句
                 string sqlstr = "select * from aspnet_Yuangongtest";
                 //创建数据库连接对象
-                SqlConnection con = new SqlConnection("server=PC-201401242045;database=aspnetdb;uid=sa;pwd=ppzsppzs;");
+                SqlConnection con = new SqlConnection("server=PC-201401242045;database=aspnetdb;uid=sa;pwd=123456;");
                 //创建数据适配器
                 SqlDataAdapter da = new SqlDataAdapter(sqlstr, con);
                 //创建数据集
@@ -158,7 +158,7 @@ namespace System003
             }
             else if (int.Parse(Session["quanxian"].ToString()) == 2)
             {
-                SqlConnection sqlcon = new SqlConnection("server=PC-201401242045;database=aspnetdb;uid=sa;pwd=ppzsppzs;");//创建数据库连接对象
+                SqlConnection sqlcon = new SqlConnection("server=PC-201401242045;database=aspnetdb;uid=sa;pwd=123456;");//创建数据库连接对象
                 if (sqlcon.State == ConnectionState.Closed)     //判断连接是否关闭
                 {
                     sqlcon.Open();                              //打开数据库连接
@@ -175,7 +175,7 @@ namespace System003
                     //定义执行查询操作的SQL语句
                     string sqlstr = "select * from aspnet_Yuangongtest where 所在部门 IN (select 网点名称 from aspnet_Dituiwangdiantest where 客户经理OA = '" + Session["dangqiandenglu"] + "')";
                     //创建数据库连接对象
-                    SqlConnection con = new SqlConnection("server=PC-201401242045;database=aspnetdb;uid=sa;pwd=ppzsppzs;");
+                    SqlConnection con = new SqlConnection("server=PC-201401242045;database=aspnetdb;uid=sa;pwd=123456;");
                     //创建数据适配器
                     SqlDataAdapter da = new SqlDataAdapter(sqlstr, con);
                     //创建数据集
@@ -197,7 +197,7 @@ namespace System003
                     //定义执行查询操作的SQL语句
                     string sqlstr = "select * from aspnet_Dituiwangdiantest where 客户经理OA <> '" + Session["dangqiandenglu"] + "' and 客户经理OA <> 'boss' and 客户经理OA NOT LIKE 'bumenmanager%'";
                     //创建数据库连接对象
-                    SqlConnection con = new SqlConnection("server=PC-201401242045;database=aspnetdb;uid=sa;pwd=ppzsppzs;");
+                    SqlConnection con = new SqlConnection("server=PC-201401242045;database=aspnetdb;uid=sa;pwd=123456;");
                     //创建数据适配器
                     SqlDataAdapter da = new SqlDataAdapter(sqlstr, con);
                     //创建数据集
@@ -222,7 +222,7 @@ namespace System003
                 //定义执行查询操作的SQL语句
                 string sqlstr = "select * from aspnet_Yuangongtest where 所在部门 IN(select 所在部门 from aspnet_Yuangongtest where 员工OA = '" + Session["dangqiandenglu"] + "') and 员工OA <> '" + Session["dangqiandenglu"] + "'";
                 //创建数据库连接对象
-                SqlConnection con = new SqlConnection("server=PC-201401242045;database=aspnetdb;uid=sa;pwd=ppzsppzs;");
+                SqlConnection con = new SqlConnection("server=PC-201401242045;database=aspnetdb;uid=sa;pwd=123456;");
                 //创建数据适配器
                 SqlDataAdapter da = new SqlDataAdapter(sqlstr, con);
                 //创建数据集
@@ -239,7 +239,7 @@ namespace System003
             ////定义执行查询操作的SQL语句
             //string sqlstr = "select * from aspnet_Yuangongtest where 员工OA <> '" + Session["dangqiandenglu"] + "'";
             ////创建数据库连接对象
-            //SqlConnection con = new SqlConnection("server=PC-201401242045;database=aspnetdb;uid=sa;pwd=ppzsppzs;");
+            //SqlConnection con = new SqlConnection("server=PC-201401242045;database=aspnetdb;uid=sa;pwd=123456;");
             ////创建数据适配器
             //SqlDataAdapter da = new SqlDataAdapter(sqlstr, con);
             ////创建数据集
@@ -256,7 +256,7 @@ namespace System003
 
         protected void Button7_Click(object sender, EventArgs e)
         {
-            SqlConnection sqlcon = new SqlConnection("server=PC-201401242045;database=aspnetdb;uid=sa;pwd=ppzsppzs;");//创建数据库连接对象                                                                                                                         //创建SqlCommand对象
+            SqlConnection sqlcon = new SqlConnection("server=PC-201401242045;database=aspnetdb;uid=sa;pwd=123456;");//创建数据库连接对象                                                                                                                         //创建SqlCommand对象
             SqlCommand sqlcmd = new SqlCommand("select * from aspnet_Yuangongtest", sqlcon);
             if (sqlcon.State == ConnectionState.Closed)     //判断连接是否关闭
             {
@@ -271,7 +271,7 @@ namespace System003
             sqldr.Close();//关闭SqlDataReader对象
             sqlcon.Close();//关闭数据库连接
                                  
-            //SqlConnection sqlcon = new SqlConnection("server=PC-201401242045;database=aspnetdb;uid=sa;pwd=ppzsppzs;");//创建数据库连接对象                                                                                                                         //创建SqlCommand对象
+            //SqlConnection sqlcon = new SqlConnection("server=PC-201401242045;database=aspnetdb;uid=sa;pwd=123456;");//创建数据库连接对象                                                                                                                         //创建SqlCommand对象
             //SqlCommand sqlcmd = new SqlCommand("select * from aspnet_Yuangongtest where 员工OA <> '" + Session["dangqiandenglu"] + "'", sqlcon);
             //if (sqlcon.State == ConnectionState.Closed)     //判断连接是否关闭
             //{
@@ -289,7 +289,7 @@ namespace System003
 
         protected void Button8_Click(object sender, EventArgs e)
         { 
-            SqlConnection sqlcon = new SqlConnection("server=PC-201401242045;database=aspnetdb;uid=sa;pwd=ppzsppzs;");//创建数据库连接对象                                                                                                                         //创建SqlCommand对象
+            SqlConnection sqlcon = new SqlConnection("server=PC-201401242045;database=aspnetdb;uid=sa;pwd=123456;");//创建数据库连接对象                                                                                                                         //创建SqlCommand对象
             SqlCommand sqlcmd = new SqlCommand("select * from aspnet_Dituiwangdiantest where 客户经理OA <> '" + Session["dangqiandenglu"] + "'", sqlcon);
             if (sqlcon.State == ConnectionState.Closed)     //判断连接是否关闭
             {
@@ -304,7 +304,7 @@ namespace System003
             sqldr.Close();//关闭SqlDataReader对象
             sqlcon.Close();//关闭数据库连接
                  
-            //SqlConnection sqlcon = new SqlConnection("server=PC-201401242045;database=aspnetdb;uid=sa;pwd=ppzsppzs;");//创建数据库连接对象                                                                                                                         //创建SqlCommand对象
+            //SqlConnection sqlcon = new SqlConnection("server=PC-201401242045;database=aspnetdb;uid=sa;pwd=123456;");//创建数据库连接对象                                                                                                                         //创建SqlCommand对象
             //SqlCommand sqlcmd = new SqlCommand("select * from aspnet_Dituiwangdiantest where 客户经理OA <> '" + Session["dangqiandenglu"] + "'", sqlcon);
             //if (sqlcon.State == ConnectionState.Closed)     //判断连接是否关闭
             //{
