@@ -55,6 +55,7 @@ namespace System003
             {
                 Button8.Visible = true;
                 Button11.Visible = true;
+                Button12.Visible = true;
             }
             else if(int.Parse(Session["quanxian"].ToString()) == 2)
             {

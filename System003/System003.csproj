@@ -169,6 +169,7 @@
     <Content Include="Diaobo2.aspx" />
     <Content Include="Diaobo3.aspx" />
     <Content Include="Diaobo4.aspx" />
+    <Content Include="Guanli.aspx" />
     <Content Include="Image\background_login.jpg" />
     <Content Include="Image\grey.jpg" />
     <Content Include="jquery\1.11.1\jquery.min.js" />
@@ -304,6 +305,13 @@
     </Compile>
     <Compile Include="Diaobo4.aspx.designer.cs">
       <DependentUpon>Diaobo4.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Guanli.aspx.cs">
+      <DependentUpon>Guanli.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Guanli.aspx.designer.cs">
+      <DependentUpon>Guanli.aspx</DependentUpon>
     </Compile>
     <Compile Include="Kaika.aspx.cs">
       <DependentUpon>Kaika.aspx</DependentUpon>
