@@ -171,6 +171,10 @@
     <Content Include="Diaobo4.aspx" />
     <Content Include="Guanli.aspx" />
     <Content Include="Guanli2.aspx" />
+    <Content Include="Guanli3.aspx" />
+    <Content Include="Guanli4.aspx" />
+    <Content Include="Guanli5.aspx" />
+    <Content Include="Guanli6.aspx" />
     <Content Include="Image\background_login.jpg" />
     <Content Include="Image\BtnCancel.gif" />
     <Content Include="Image\BtnDelete.gif" />
@@ -324,6 +328,34 @@
     </Compile>
     <Compile Include="Guanli2.aspx.designer.cs">
       <DependentUpon>Guanli2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Guanli3.aspx.cs">
+      <DependentUpon>Guanli3.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Guanli3.aspx.designer.cs">
+      <DependentUpon>Guanli3.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Guanli4.aspx.cs">
+      <DependentUpon>Guanli4.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Guanli4.aspx.designer.cs">
+      <DependentUpon>Guanli4.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Guanli5.aspx.cs">
+      <DependentUpon>Guanli5.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Guanli5.aspx.designer.cs">
+      <DependentUpon>Guanli5.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Guanli6.aspx.cs">
+      <DependentUpon>Guanli6.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Guanli6.aspx.designer.cs">
+      <DependentUpon>Guanli6.aspx</DependentUpon>
     </Compile>
     <Compile Include="Kaika.aspx.cs">
       <DependentUpon>Kaika.aspx</DependentUpon>
