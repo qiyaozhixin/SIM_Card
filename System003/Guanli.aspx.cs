@@ -1,5 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
+using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -15,6 +18,6 @@ namespace System003
             {
                 Response.Write("<script>window.alert('违规操作！');location.href='Default.aspx';</script>");
             }
-        }
+        }     
     }
 }

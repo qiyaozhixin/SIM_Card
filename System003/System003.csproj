@@ -170,7 +170,12 @@
     <Content Include="Diaobo3.aspx" />
     <Content Include="Diaobo4.aspx" />
     <Content Include="Guanli.aspx" />
+    <Content Include="Guanli2.aspx" />
     <Content Include="Image\background_login.jpg" />
+    <Content Include="Image\BtnCancel.gif" />
+    <Content Include="Image\BtnDelete.gif" />
+    <Content Include="Image\BtnSave.gif" />
+    <Content Include="Image\BtnUpdate.gif" />
     <Content Include="Image\grey.jpg" />
     <Content Include="jquery\1.11.1\jquery.min.js" />
     <Content Include="Kaika2.aspx" />
@@ -312,6 +317,13 @@
     </Compile>
     <Compile Include="Guanli.aspx.designer.cs">
       <DependentUpon>Guanli.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Guanli2.aspx.cs">
+      <DependentUpon>Guanli2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Guanli2.aspx.designer.cs">
+      <DependentUpon>Guanli2.aspx</DependentUpon>
     </Compile>
     <Compile Include="Kaika.aspx.cs">
       <DependentUpon>Kaika.aspx</DependentUpon>
