@@ -205,6 +205,7 @@
     <Content Include="Wodedenglu.aspx" />
     <Content Include="Wodedenglu_new.aspx" />
     <Content Include="Wodezhuce.aspx" />
+    <Content Include="Xiugaimima.aspx" />
     <None Include="Properties\PublishProfiles\web.config.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -427,6 +428,13 @@
     </Compile>
     <Compile Include="Wodezhuce.aspx.designer.cs">
       <DependentUpon>Wodezhuce.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Xiugaimima.aspx.cs">
+      <DependentUpon>Xiugaimima.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Xiugaimima.aspx.designer.cs">
+      <DependentUpon>Xiugaimima.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
