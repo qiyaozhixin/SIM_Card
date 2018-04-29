@@ -165,6 +165,8 @@
     <Content Include="bootstrap\js\bootstrap.min.js" />
     <Content Include="bootstrap\js\npm.js" />
     <Content Include="Chaxun.aspx" />
+    <Content Include="Chaxun1_2.aspx" />
+    <Content Include="Chaxun1_3.aspx" />
     <Content Include="Chaxun3.aspx" />
     <Content Include="Diaobo2.aspx" />
     <Content Include="Diaobo3.aspx" />
@@ -266,6 +268,20 @@
     </Compile>
     <Compile Include="Chaxun.aspx.designer.cs">
       <DependentUpon>Chaxun.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Chaxun1_2.aspx.cs">
+      <DependentUpon>Chaxun1_2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Chaxun1_2.aspx.designer.cs">
+      <DependentUpon>Chaxun1_2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Chaxun1_3.aspx.cs">
+      <DependentUpon>Chaxun1_3.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Chaxun1_3.aspx.designer.cs">
+      <DependentUpon>Chaxun1_3.aspx</DependentUpon>
     </Compile>
     <Compile Include="Chaxun2.aspx.cs">
       <DependentUpon>Chaxun2.aspx</DependentUpon>
