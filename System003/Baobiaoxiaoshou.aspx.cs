@@ -19,6 +19,11 @@ namespace System003
                 {
                     Response.Write("<script>window.alert('违规操作！');location.href='Default.aspx';</script>");
                 }
+                if (int.Parse(Session["quanxian"].ToString()) != 1)
+                {
+                    Label3.Visible = false;
+                    Label4.Visible = false;
+                }
                 if (Convert.ToString(Session["yuangongoa_baobiao"]) != "")
                 {
                     SqlConnection sqlcon = new SqlConnection("server=PC-201401242045;database=aspnetdb;uid=sa;pwd=123456;");//创建数据库连接对象
@@ -27,7 +32,8 @@ namespace System003
                         sqlcon.Open();                              //打开数据库连接
                     }
                     //创建SqlCommand对象
-                    SqlCommand sqlcmd = new SqlCommand("select 所在部门 from aspnet_Yuangongtest where 员工OA = '" + Session["yuangongoa_baobiao"] + "';select count(*) from aspnet_Xiaoshoutest where 销售者 = '" + Session["yuangongoa_baobiao"] + "'", sqlcon);
+                    SqlCommand sqlcmd = new SqlCommand("select 所在部门 from aspnet_Yuangongtest where 员工OA = '" + Session["yuangongoa_baobiao"] + "';select count(*) from aspnet_Xiaoshoutest where 销售者 = '" + Session["yuangongoa_baobiao"] + "';select SUM(套餐类型) from aspnet_Xiaoshoutest where 销售者 = '" + Session["yuangongoa_baobiao"] + "'", sqlcon);
+                    //SqlCommand sqlcmd = new SqlCommand("select 所在部门 from aspnet_Yuangongtest where 员工OA = '" + Session["yuangongoa_baobiao"] + "';select SUM(套餐类型) from aspnet_Xiaoshoutest where 销售者 = '" + Session["yuangongoa_baobiao"] + "'", sqlcon);
                     //使用ExecuteReader方法的返回值创建SqlDataReader对象
                     SqlDataReader sqldr = sqlcmd.ExecuteReader();
                     do
@@ -41,11 +47,22 @@ namespace System003
                         }
                     }
                     while (sqldr.NextResult() == false);
+                    do
+                    {
+                        if (sqldr.HasRows)
+                        {
+                            while (sqldr.Read())
+                            {
+                                Label8.Text += sqldr[0];
+                            }
+                        }
+                    }
+                    while (sqldr.NextResult() == false);
                     if (sqldr.HasRows)
                     {
                         while (sqldr.Read())
                         {
-                            Label8.Text += sqldr[0];
+                            Label12.Text += sqldr[0];
                         }
                     }
                     sqldr.Dispose();
@@ -64,7 +81,7 @@ namespace System003
                         sqlcon.Open();                              //打开数据库连接
                     }
                     //创建SqlCommand对象
-                    SqlCommand sqlcmd = new SqlCommand("select 网点名称 from aspnet_Dituiwangdiantest where 客户经理OA = '" + Session["manageroa_baobiao"] + "';select count(*) from aspnet_Xiaoshoutest where 销售者 = '" + Session["manageroa_baobiao"] + "'", sqlcon);
+                    SqlCommand sqlcmd = new SqlCommand("select 网点名称 from aspnet_Dituiwangdiantest where 客户经理OA = '" + Session["manageroa_baobiao"] + "';select count(*) from aspnet_Xiaoshoutest where 销售者 = '" + Session["manageroa_baobiao"] + "'select SUM(套餐类型) from aspnet_Xiaoshoutest where 销售者 = '" + Session["manageroa_baobiao"] + "'", sqlcon);
                     //使用ExecuteReader方法的返回值创建SqlDataReader对象
                     SqlDataReader sqldr = sqlcmd.ExecuteReader();
                     do
@@ -78,11 +95,22 @@ namespace System003
                         }
                     }
                     while (sqldr.NextResult() == false);
+                    do
+                    {
+                        if (sqldr.HasRows)
+                        {
+                            while (sqldr.Read())
+                            {
+                                Label8.Text += sqldr[0];
+                            }
+                        }
+                    }
+                    while (sqldr.NextResult() == false);
                     if (sqldr.HasRows)
                     {
                         while (sqldr.Read())
                         {
-                            Label8.Text += sqldr[0];
+                            Label12.Text += sqldr[0];
                         }
                     }
                     sqldr.Dispose();

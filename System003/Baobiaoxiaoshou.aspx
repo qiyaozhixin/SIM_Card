@@ -11,6 +11,9 @@
     <asp:Label ID="Label7" runat="server" Text="销售卡数量"></asp:Label>
     <asp:Label ID="Label8" runat="server"></asp:Label>
     <br />
+    <asp:Label ID="Label11" runat="server" Text="销售套餐统计"></asp:Label>
+    <asp:Label ID="Label12" runat="server"></asp:Label>
+    <br />
     <asp:Label ID="Label9" runat="server" Text="统计时间"></asp:Label>
     <asp:Label ID="Label10" runat="server"></asp:Label>
     <br />
