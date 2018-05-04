@@ -24,6 +24,10 @@ namespace System003
                     Label3.Visible = false;
                     Label4.Visible = false;
                 }
+                //if (int.Parse(Session["quanxian"].ToString()) == 3)
+                //{
+                //    Image1.Visible = true;
+                //}
                 if (Convert.ToString(Session["yuangongoa_baobiao"]) != "")
                 {
                     SqlConnection sqlcon = new SqlConnection("server=PC-201401242045;database=aspnetdb;uid=sa;pwd=123456;");//创建数据库连接对象

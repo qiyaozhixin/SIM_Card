@@ -208,6 +208,8 @@
     <Content Include="Wodedenglu_new.aspx" />
     <Content Include="Wodezhuce.aspx" />
     <Content Include="Xiugaimima.aspx" />
+    <Content Include="Zhexiantu.aspx" />
+    <Content Include="Zhexiantu2.aspx" />
     <None Include="Properties\PublishProfiles\web.config.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -451,6 +453,20 @@
     </Compile>
     <Compile Include="Xiugaimima.aspx.designer.cs">
       <DependentUpon>Xiugaimima.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Zhexiantu.aspx.cs">
+      <DependentUpon>Zhexiantu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Zhexiantu.aspx.designer.cs">
+      <DependentUpon>Zhexiantu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Zhexiantu2.aspx.cs">
+      <DependentUpon>Zhexiantu2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Zhexiantu2.aspx.designer.cs">
+      <DependentUpon>Zhexiantu2.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
