@@ -2,8 +2,14 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolderMain" runat="server">
-    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" PageSize="5">
-         <Columns>
+    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" PageSize="5" CssClass="GridViewStyle">
+        <FooterStyle CssClass="GridViewFooterStyle"/>
+        <RowStyle CssClass="GridViewRowStyle"/>   
+        <SelectedRowStyle CssClass="GridViewSelectedRowStyle"/>
+        <PagerStyle CssClass="GridViewPagerStyle"/>
+        <AlternatingRowStyle CssClass="GridViewAlternatingRowStyle"/>
+        <HeaderStyle CssClass="GridViewHeaderStyle"/>
+        <Columns>
                 <asp:BoundField DataField="ICCID" HeaderText="ICCID" ReadOnly="True" />
                 <asp:BoundField DataField="PUK码" HeaderText="PUK码" />
                 <asp:TemplateField HeaderText="选择">
@@ -27,5 +33,5 @@
         <asp:ListItem>888</asp:ListItem>
     </asp:DropDownList>
     <br />
-    <asp:Button ID="Button10" runat="server" Text="确定" OnClick="Button10_Click" />
+    <asp:Button ID="Button10" runat="server" Text="确定" OnClick="Button10_Click" class="button"/>
 </asp:Content>

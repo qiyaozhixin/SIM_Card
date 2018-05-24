@@ -7,5 +7,5 @@
         <asp:ListItem>余量报表</asp:ListItem>
     </asp:DropDownList>
     <br />
-    <asp:Button ID="Button11" runat="server" Text="生成个人报表" OnClick="Button11_Click" />
+    <asp:Button ID="Button11" runat="server" Text="生成个人报表" OnClick="Button11_Click" class="button"/>
 </asp:Content>

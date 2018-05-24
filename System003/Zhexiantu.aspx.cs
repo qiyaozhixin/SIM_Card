@@ -204,7 +204,7 @@ namespace System003
 
 
 
-            Bitmap image = new Bitmap(1000, 600);
+            Bitmap image = new Bitmap(1000, 500);
             Graphics graphics = Graphics.FromImage(image);
             try
             {

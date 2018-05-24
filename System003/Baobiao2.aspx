@@ -9,5 +9,5 @@
     <asp:Label ID="Label3" runat="server" Text="OA"></asp:Label>
     <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
     <br />
-    <asp:Button ID="Button9" runat="server" Text="生成报表" OnClick="Button9_Click" />
+    <asp:Button ID="Button9" runat="server" Text="生成报表" OnClick="Button9_Click" class="button"/>
 </asp:Content>

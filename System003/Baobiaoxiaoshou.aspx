@@ -17,7 +17,7 @@
     <asp:Label ID="Label9" runat="server" Text="统计时间"></asp:Label>
     <asp:Label ID="Label10" runat="server"></asp:Label>
     <br />
-    <asp:Button ID="Button9" runat="server" Text="返回" OnClick="Button9_Click" />
+    <asp:Button ID="Button9" runat="server" Text="返回" OnClick="Button9_Click" class="button"/>
     <br />
 <%--    <asp:Image ID="Image1"  src="Zhexiantu.aspx" runat="server" Height="600px" Width="1000px" Visible="False" />--%>
 </asp:Content>

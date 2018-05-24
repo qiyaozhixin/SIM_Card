@@ -15,5 +15,5 @@
     <asp:Label ID="Label2" runat="server" Text="密码"></asp:Label>
     <asp:TextBox ID="TextBox2" runat="server" TextMode="Password"></asp:TextBox>
     <br />
-    <asp:Button ID="Button8" runat="server" Text="确认" OnClick="Button8_Click" />
+    <asp:Button ID="Button8" runat="server" Text="确认" OnClick="Button8_Click" class="button"/>
     </asp:Content>

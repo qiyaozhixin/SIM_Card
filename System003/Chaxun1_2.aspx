@@ -11,5 +11,5 @@
     <asp:Label ID="Label6" runat="server" Text="ICCID"></asp:Label>
     <asp:TextBox ID="TextBox3" runat="server"></asp:TextBox>
     <br />
-    <asp:Button ID="Button13" runat="server" Text="查询" OnClick="Button13_Click" />
+    <asp:Button ID="Button13" runat="server" Text="查询" OnClick="Button13_Click" class="button"/>
 </asp:Content>

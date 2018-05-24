@@ -24,5 +24,5 @@
     <br />
     <asp:Label ID="Label14" runat="server"></asp:Label>
     <br />
-    <asp:Button ID="Button10" runat="server" Text="返回" PostBackUrl="~/Kaika.aspx" />
+    <asp:Button ID="Button10" runat="server" Text="返回" PostBackUrl="~/Kaika.aspx" class="button"/>
 </asp:Content>

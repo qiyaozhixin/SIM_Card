@@ -69,7 +69,7 @@ namespace System003
             else//还未登陆
             {
                 Label1.Visible = false;
-                Label3.Visible = true;
+                //Label3.Visible = true;
                 Button1.Visible = false;
                 Button2.Visible = false;
                 Button3.Visible = false;

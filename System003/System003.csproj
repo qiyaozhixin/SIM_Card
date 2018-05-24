@@ -102,72 +102,11 @@
     <Content Include="Baobiao3.aspx" />
     <Content Include="Baobiaoxiaoshou.aspx" />
     <Content Include="Baobiaoyuliang.aspx" />
-    <Content Include="bootstrap\css\bootstrap-theme.css" />
-    <Content Include="bootstrap\css\bootstrap-theme.min.css" />
-    <Content Include="bootstrap\css\bootstrap.css" />
-    <Content Include="bootstrap\css\bootstrap.min.css" />
-    <Content Include="bootstrap\dist_select\css\bootstrap-select.css" />
-    <Content Include="bootstrap\dist_select\css\bootstrap-select.min.css" />
-    <Content Include="bootstrap\dist_select\js\bootstrap-select.js" />
-    <Content Include="bootstrap\dist_select\js\bootstrap-select.min.js" />
-    <Content Include="bootstrap\dist_select\js\i18n\defaults-bg_BG.js" />
-    <Content Include="bootstrap\dist_select\js\i18n\defaults-bg_BG.min.js" />
-    <Content Include="bootstrap\dist_select\js\i18n\defaults-cs_CZ.js" />
-    <Content Include="bootstrap\dist_select\js\i18n\defaults-cs_CZ.min.js" />
-    <Content Include="bootstrap\dist_select\js\i18n\defaults-da_DK.js" />
-    <Content Include="bootstrap\dist_select\js\i18n\defaults-da_DK.min.js" />
-    <Content Include="bootstrap\dist_select\js\i18n\defaults-de_DE.js" />
-    <Content Include="bootstrap\dist_select\js\i18n\defaults-de_DE.min.js" />
-    <Content Include="bootstrap\dist_select\js\i18n\defaults-en_US.js" />
-    <Content Include="bootstrap\dist_select\js\i18n\defaults-en_US.min.js" />
-    <Content Include="bootstrap\dist_select\js\i18n\defaults-es_CL.js" />
-    <Content Include="bootstrap\dist_select\js\i18n\defaults-es_CL.min.js" />
-    <Content Include="bootstrap\dist_select\js\i18n\defaults-eu.js" />
-    <Content Include="bootstrap\dist_select\js\i18n\defaults-eu.min.js" />
-    <Content Include="bootstrap\dist_select\js\i18n\defaults-fa_IR.js" />
-    <Content Include="bootstrap\dist_select\js\i18n\defaults-fa_IR.min.js" />
-    <Content Include="bootstrap\dist_select\js\i18n\defaults-fr_FR.js" />
-    <Content Include="bootstrap\dist_select\js\i18n\defaults-fr_FR.min.js" />
-    <Content Include="bootstrap\dist_select\js\i18n\defaults-hu_HU.js" />
-    <Content Include="bootstrap\dist_select\js\i18n\defaults-hu_HU.min.js" />
-    <Content Include="bootstrap\dist_select\js\i18n\defaults-it_IT.js" />
-    <Content Include="bootstrap\dist_select\js\i18n\defaults-it_IT.min.js" />
-    <Content Include="bootstrap\dist_select\js\i18n\defaults-ko_KR.js" />
-    <Content Include="bootstrap\dist_select\js\i18n\defaults-ko_KR.min.js" />
-    <Content Include="bootstrap\dist_select\js\i18n\defaults-nl_NL.js" />
-    <Content Include="bootstrap\dist_select\js\i18n\defaults-nl_NL.min.js" />
-    <Content Include="bootstrap\dist_select\js\i18n\defaults-pl_PL.js" />
-    <Content Include="bootstrap\dist_select\js\i18n\defaults-pl_PL.min.js" />
-    <Content Include="bootstrap\dist_select\js\i18n\defaults-pt_BR.js" />
-    <Content Include="bootstrap\dist_select\js\i18n\defaults-pt_BR.min.js" />
-    <Content Include="bootstrap\dist_select\js\i18n\defaults-pt_PT.js" />
-    <Content Include="bootstrap\dist_select\js\i18n\defaults-pt_PT.min.js" />
-    <Content Include="bootstrap\dist_select\js\i18n\defaults-ro_RO.js" />
-    <Content Include="bootstrap\dist_select\js\i18n\defaults-ro_RO.min.js" />
-    <Content Include="bootstrap\dist_select\js\i18n\defaults-ru_RU.js" />
-    <Content Include="bootstrap\dist_select\js\i18n\defaults-ru_RU.min.js" />
-    <Content Include="bootstrap\dist_select\js\i18n\defaults-sk_SK.js" />
-    <Content Include="bootstrap\dist_select\js\i18n\defaults-sk_SK.min.js" />
-    <Content Include="bootstrap\dist_select\js\i18n\defaults-sl_SI.js" />
-    <Content Include="bootstrap\dist_select\js\i18n\defaults-sl_SI.min.js" />
-    <Content Include="bootstrap\dist_select\js\i18n\defaults-sv_SE.js" />
-    <Content Include="bootstrap\dist_select\js\i18n\defaults-sv_SE.min.js" />
-    <Content Include="bootstrap\dist_select\js\i18n\defaults-tr_TR.js" />
-    <Content Include="bootstrap\dist_select\js\i18n\defaults-tr_TR.min.js" />
-    <Content Include="bootstrap\dist_select\js\i18n\defaults-ua_UA.js" />
-    <Content Include="bootstrap\dist_select\js\i18n\defaults-ua_UA.min.js" />
-    <Content Include="bootstrap\dist_select\js\i18n\defaults-zh_CN.js" />
-    <Content Include="bootstrap\dist_select\js\i18n\defaults-zh_CN.min.js" />
-    <Content Include="bootstrap\dist_select\js\i18n\defaults-zh_TW.js" />
-    <Content Include="bootstrap\dist_select\js\i18n\defaults-zh_TW.min.js" />
-    <Content Include="bootstrap\fonts\glyphicons-halflings-regular.svg" />
-    <Content Include="bootstrap\js\bootstrap.js" />
-    <Content Include="bootstrap\js\bootstrap.min.js" />
-    <Content Include="bootstrap\js\npm.js" />
     <Content Include="Chaxun.aspx" />
     <Content Include="Chaxun1_2.aspx" />
     <Content Include="Chaxun1_3.aspx" />
     <Content Include="Chaxun3.aspx" />
+    <Content Include="Css\test.css" />
     <Content Include="Diaobo2.aspx" />
     <Content Include="Diaobo3.aspx" />
     <Content Include="Diaobo4.aspx" />
@@ -183,7 +122,6 @@
     <Content Include="Image\BtnSave.gif" />
     <Content Include="Image\BtnUpdate.gif" />
     <Content Include="Image\grey.jpg" />
-    <Content Include="jquery\1.11.1\jquery.min.js" />
     <Content Include="Kaika2.aspx" />
     <Content Include="Kaika3.aspx" />
     <Content Include="packages.config" />
@@ -191,21 +129,10 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Masterpage.Master" />
-    <Content Include="bootstrap\css\bootstrap-theme.css.map" />
-    <Content Include="bootstrap\css\bootstrap-theme.min.css.map" />
-    <Content Include="bootstrap\css\bootstrap.css.map" />
-    <Content Include="bootstrap\css\bootstrap.min.css.map" />
-    <Content Include="bootstrap\dist_select\css\bootstrap-select.css.map" />
-    <Content Include="bootstrap\dist_select\js\bootstrap-select.js.map" />
-    <Content Include="bootstrap\fonts\glyphicons-halflings-regular.eot" />
-    <Content Include="bootstrap\fonts\glyphicons-halflings-regular.ttf" />
-    <Content Include="bootstrap\fonts\glyphicons-halflings-regular.woff" />
-    <Content Include="bootstrap\fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="Ruku.aspx" />
     <Content Include="Ruku2.aspx" />
     <Content Include="Wode.aspx" />
     <Content Include="Wodedenglu.aspx" />
-    <Content Include="Wodedenglu_new.aspx" />
     <Content Include="Wodezhuce.aspx" />
     <Content Include="Xiugaimima.aspx" />
     <Content Include="Zhexiantu.aspx" />
@@ -433,13 +360,6 @@
     <Compile Include="Wodedenglu.aspx.designer.cs">
       <DependentUpon>Wodedenglu.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Wodedenglu_new.aspx.cs">
-      <DependentUpon>Wodedenglu_new.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Wodedenglu_new.aspx.designer.cs">
-      <DependentUpon>Wodedenglu_new.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Wodezhuce.aspx.cs">
       <DependentUpon>Wodezhuce.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -470,8 +390,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Content\" />
-    <Folder Include="Scripts\" />
     <Folder Include="Uploadfiles\" />
   </ItemGroup>
   <PropertyGroup>

@@ -20,5 +20,5 @@
     <br />
     <asp:Label ID="Label9" runat="server"></asp:Label>
     <br />
-    <asp:Button ID="Button7" runat="server" Text="返回" OnClick="Button7_Click" />
+    <asp:Button ID="Button7" runat="server" Text="返回" OnClick="Button7_Click" class="button"/>
     </asp:Content>

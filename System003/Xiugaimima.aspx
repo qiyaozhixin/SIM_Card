@@ -8,5 +8,5 @@
     <asp:Label ID="Label5" runat="server" Text="请输入新密码"></asp:Label>
     <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
     <br />
-    <asp:Button ID="Button13" runat="server" Text="确定" OnClick="Button13_Click" />
+    <asp:Button ID="Button13" runat="server" Text="确定" OnClick="Button13_Click" class="button"/>
 </asp:Content>

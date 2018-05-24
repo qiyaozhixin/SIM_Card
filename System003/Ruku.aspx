@@ -8,7 +8,6 @@
     <asp:Label ID="Label5" runat="server" Text="PUK码"></asp:Label>
     <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
     <br />
-    <asp:Button ID="Button11" runat="server" Text="确定" OnClick="Button11_Click" />
-    <br />
-    <asp:Button ID="Button12" runat="server" Text="批量导入" PostBackUrl="~/Ruku2.aspx" />
+    <asp:Button ID="Button11" runat="server" Text="确定" OnClick="Button11_Click" class="button"/>
+    <asp:Button ID="Button12" runat="server" Text="批量导入" PostBackUrl="~/Ruku2.aspx" class="button"/>
 </asp:Content>

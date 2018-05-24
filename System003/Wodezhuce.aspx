@@ -19,5 +19,5 @@
         <asp:ListItem>部门04</asp:ListItem>
     </asp:DropDownList>
     <br />
-    <asp:Button ID="Button8" runat="server" Text="注册" OnClick="Button8_Click" />
+    <asp:Button ID="Button8" runat="server" Text="注册" OnClick="Button8_Click" class="button"/>
 </asp:Content>

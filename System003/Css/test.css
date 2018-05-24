@@ -1,0 +1,225 @@
+.button {
+    background-color: #257AB8; 
+    /*border: none;*/
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    cursor: pointer;
+    float: left;
+}
+
+.button1 {border-radius: 2px;}
+.button2 {border-radius: 4px;}
+.button3 {border-radius: 8px;}
+.button4 {border-radius: 12px;}
+.button5 {border-radius: 50%;}
+.button6 {font-size: 15px;border: none;float: right;}
+
+
+.auto-style1 {
+            position: relative;
+            float: left;
+            left: 20px;
+        }
+.auto-style2 {
+            position: relative;
+            height: 60px;
+            top: 10px;
+            float: left;
+            left: 100px;
+        }
+.auto-style3 {
+            height:50px;
+            WIDTH: 878px;
+            /*right:0;*/
+            MARGIN: 0px  auto;
+        }
+.auto-style4 {
+            position: relative;
+            height: 60px;
+            top: 15px;
+            float: right;
+        }
+
+.bottom{  
+  position:absolute;  
+  bottom:0;  
+  padding:10px;  
+  width:100%;  
+ } 
+
+
+
+.form-control { 
+display: block; 
+width: 10%; 
+height: 10px; 
+padding: 6px 12px; 
+font-size: 14px; 
+line-height: 1.428571429; 
+color: #555555; 
+vertical-align: middle; 
+background-color: #ffffff; 
+border: 1px solid #cccccc; 
+border-radius: 4px; 
+-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075); 
+box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075); 
+-webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s; 
+transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s; 
+} 
+.form-control:focus { 
+border-color: #66afe9; 
+outline: 0; 
+-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6); 
+box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6); 
+} 
+
+
+/*.GridViewStyle
+{  
+    border-right: 2px solid #A7A6AA;
+    border-bottom: 2px solid #A7A6AA;
+    border-left: 2px solid white;
+    border-top: 2px solid white;
+    padding: 4px;
+}
+.GridViewStyle. a
+{
+    color: #FFFFFF;
+}
+.GridViewHeaderStyle. th
+{
+    border-left: 1px solid #EBE9ED;
+    border-right: 1px solid #EBE9ED;
+}
+.GridViewHeaderStyle
+{
+    background-color: #5D7B9D;
+    font-weight: bold;
+    color: White;
+}
+.GridViewFooterStyle
+{
+    background-color: #5D7B9D;
+    font-weight: bold;
+    color: White;
+}
+.GridViewRowStyle
+{
+    background-color: #F7F6F3;
+    color: #333333;
+}
+.GridViewAlternatingRowStyle
+{
+    background-color: #FFFFFF;
+    color: #284775;
+}
+.GridViewRowStyle. td, .GridViewAlternatingRowStyle. td
+{
+    border: 1px solid #EBE9ED;
+}
+.GridViewSelectedRowStyle
+{
+    background-color: #E2DED6;
+    font-weight: bold;
+    color: #333333;
+}
+.GridViewPagerStyle
+{
+    background-color: #284775;
+    color: #FFFFFF;
+}
+.GridViewPagerStyle. table
+{
+    margin: 0 auto 0 auto;
+}*/
+
+
+
+.GridViewStyle
+  {  
+      border-right: 2px solid white;
+      border-bottom: 2px solid white;
+      border-left: 2px solid white;
+      border-top: 2px solid white;
+      padding: 18px;
+      width:500px;
+      font-size:15px;
+ }
+ 
+.GridViewHeaderStyle th
+{
+     border-left: 1px solid #EBE9ED;
+     border-right: 1px solid #EBE9ED;
+}
+
+.GridViewHeaderStyle
+{
+     background-color: #5D7B9D;
+     font-weight: bold;
+     color: White;
+}
+
+.GridViewFooterStyle
+{
+     background-color: #5D7B9D;
+     font-weight: bold;
+     color: White;
+}
+
+.GridViewRowStyle
+{
+     background-color: #F7F6F3;
+     color: #333333;
+}
+
+.GridViewAlternatingRowStyle
+{
+     background-color: #FFFFFF;
+     color: #284775;
+}
+
+.GridViewRowStyle td, .GridViewAlternatingRowStyle
+{
+     border: 1px solid #EBE9ED;
+}
+
+.GridViewSelectedRowStyle
+{
+     background-color: #E2DED6;
+     font-weight: bold;
+     color: #333333;
+}
+
+
+.GridViewPagerStyle
+{
+     background-color:#5D7B9D;
+     color: #FFFFFF;
+}
+
+.GridViewPagerStyle table
+{
+     margin: 0 auto 0 auto;
+}
+
+li.gobackMain a
+{
+ color:Blue;
+}
+
+
+
+.content {
+	MARGIN: 0px  auto; WIDTH: 878px;
+}
+
+
+.navigation  {
+     MARGIN: 0px  auto;  background-color: #257AB8; 
+     height:60px;
+      WIDTH: 878px;
+}

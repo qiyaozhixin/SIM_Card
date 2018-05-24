@@ -12,6 +12,6 @@
     <br />
     <asp:Label ID="Label4" runat="server"></asp:Label>
     <br />
-    <asp:Button ID="Button11" runat="server" PostBackUrl="~/Diaobo2.aspx" Text="上一步" />
-    <asp:Button ID="Button7" runat="server" Text="确定" OnClick="Button7_Click" />
+    <asp:Button ID="Button11" runat="server" PostBackUrl="~/Diaobo2.aspx" Text="上一步" class="button"/>
+    <asp:Button ID="Button7" runat="server" Text="确定" OnClick="Button7_Click" class="button"/>
     </asp:Content>
