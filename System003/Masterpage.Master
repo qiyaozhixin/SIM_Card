@@ -67,7 +67,7 @@
             <asp:Image ID="Image1" runat="server" ImageUrl="~/Image/1.png" Height="53px" Width="166px" />
         </div>
         <div style="text-align:left; font-family: 等线; font-size: xx-large; color: #FFFFFF;" class="auto-style2">
-        电话卡销售系统
+        电话卡销售管理系统
         </div>   
         <asp:Button ID="Button8" runat="server" OnClick="Button8_Click" Text="注销" class="button button6"/>
         <asp:Button ID="Button7" runat="server" PostBackUrl="~/Wode.aspx" Text="我的" class="button button6"/>

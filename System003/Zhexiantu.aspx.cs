@@ -224,6 +224,8 @@ namespace System003
                 if (manqpfl.Length > 0)
                 {
                     graphics.DrawString("员工每周销售电话卡数据折线图", font1, brush1, new PointF(1000 / 2 - 200, 30));//标注图片标题
+                    graphics.DrawString("张", font1, brush1, new PointF(35, 110));
+                    graphics.DrawString("周", font1, brush1, new PointF(970, 460));
                     //graphics.DrawString("商业险为红色折线", font2, brush2, new PointF(1000 / 2 + 200, 500));//标注注释信息
                     //graphics.DrawString("交强险为绿色折线", font2, brush3, new PointF(1000 / 2 + 200, 530));//标注注释信息
                     //graphics.DrawString("车 险为棕色折线", font2, brush4, new PointF(1000 / 2 + 200, 560));//标注注释信息

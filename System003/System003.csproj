@@ -116,6 +116,7 @@
     <Content Include="Guanli4.aspx" />
     <Content Include="Guanli5.aspx" />
     <Content Include="Guanli6.aspx" />
+    <Content Include="Image\1.png" />
     <Content Include="Image\background_login.jpg" />
     <Content Include="Image\BtnCancel.gif" />
     <Content Include="Image\BtnDelete.gif" />

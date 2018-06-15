@@ -19,10 +19,10 @@
                 </asp:TemplateField>
         </Columns>
     </asp:GridView>
-    <asp:Label ID="Label5" runat="server" Text="身份证号"></asp:Label>
+    <asp:Label ID="Label5" runat="server" Text="身份证号" Width="100px"></asp:Label>
     <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
     <br />
-    <asp:Label ID="Label6" runat="server" Text="套餐类型"></asp:Label>
+    <asp:Label ID="Label6" runat="server" Text="套餐类型" Width="100px"></asp:Label>
     <asp:DropDownList ID="DropDownList1" runat="server" AutoPostBack="True">
         <asp:ListItem>20</asp:ListItem>
         <asp:ListItem>30</asp:ListItem>
