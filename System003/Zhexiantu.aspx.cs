@@ -15,14 +15,14 @@ namespace System003
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            double[] manqpfl = { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 }; ;
+            double[] manqpfl = { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ,0}; 
             SqlConnection sqlcon = new SqlConnection("server=PC-201401242045;database=aspnetdb;uid=sa;pwd=123456;");//创建数据库连接对象
             if (sqlcon.State == ConnectionState.Closed)     //判断连接是否关闭
             {
                 sqlcon.Open();                              //打开数据库连接
             }
             //创建SqlCommand对象
-            SqlCommand sqlcmd = new SqlCommand("select count(*) from aspnet_Xiaoshoutest where 销售时间 > '2018-03-05 00:00:00' and 销售时间 < '2018-03-12 00:00:00';select count(*) from aspnet_Xiaoshoutest where 销售时间 > '2018-03-12 00:00:00' and 销售时间 < '2018-03-19 00:00:00';select count(*) from aspnet_Xiaoshoutest where 销售时间 > '2018-03-19 00:00:00' and 销售时间 < '2018-03-26 00:00:00';select count(*) from aspnet_Xiaoshoutest where 销售时间 > '2018-03-26 00:00:00' and 销售时间 < '2018-04-02 00:00:00';select count(*) from aspnet_Xiaoshoutest where 销售时间 > '2018-04-02 00:00:00' and 销售时间 < '2018-04-09 00:00:00';select count(*) from aspnet_Xiaoshoutest where 销售时间 > '2018-04-09 00:00:00' and 销售时间 < '2018-04-16 00:00:00';select count(*) from aspnet_Xiaoshoutest where 销售时间 > '2018-04-16 00:00:00' and 销售时间 < '2018-04-23 00:00:00';select count(*) from aspnet_Xiaoshoutest where 销售时间 > '2018-04-23 00:00:00' and 销售时间 < '2018-04-30 00:00:00';select count(*) from aspnet_Xiaoshoutest where 销售时间 > '2018-04-30 00:00:00' and 销售时间 < '2018-05-07 00:00:00';select count(*) from aspnet_Xiaoshoutest where 销售时间 > '2018-05-07 00:00:00' and 销售时间 < '2018-05-14 00:00:00';select count(*) from aspnet_Xiaoshoutest where 销售时间 > '2018-05-14 00:00:00' and 销售时间 < '2018-05-21 00:00:00';select count(*) from aspnet_Xiaoshoutest where 销售时间 > '2018-05-21 00:00:00' and 销售时间 < '2018-05-28 00:00:00';select count(*) from aspnet_Xiaoshoutest where 销售时间 > '2018-05-28 00:00:00' and 销售时间 < '2018-06-04 00:00:00';select count(*) from aspnet_Xiaoshoutest where 销售时间 > '2018-06-04 00:00:00' and 销售时间 < '2018-06-11 00:00:00';select count(*) from aspnet_Xiaoshoutest where 销售时间 > '2018-06-11 00:00:00' and 销售时间 < '2018-06-18 00:00:00'", sqlcon);
+            SqlCommand sqlcmd = new SqlCommand("select count(*) from aspnet_Xiaoshoutest where 销售时间 > '2018-03-05 00:00:00' and 销售时间 < '2018-03-12 00:00:00';select count(*) from aspnet_Xiaoshoutest where 销售时间 > '2018-03-12 00:00:00' and 销售时间 < '2018-03-19 00:00:00';select count(*) from aspnet_Xiaoshoutest where 销售时间 > '2018-03-19 00:00:00' and 销售时间 < '2018-03-26 00:00:00';select count(*) from aspnet_Xiaoshoutest where 销售时间 > '2018-03-26 00:00:00' and 销售时间 < '2018-04-02 00:00:00';select count(*) from aspnet_Xiaoshoutest where 销售时间 > '2018-04-02 00:00:00' and 销售时间 < '2018-04-09 00:00:00';select count(*) from aspnet_Xiaoshoutest where 销售时间 > '2018-04-09 00:00:00' and 销售时间 < '2018-04-16 00:00:00';select count(*) from aspnet_Xiaoshoutest where 销售时间 > '2018-04-16 00:00:00' and 销售时间 < '2018-04-23 00:00:00';select count(*) from aspnet_Xiaoshoutest where 销售时间 > '2018-04-23 00:00:00' and 销售时间 < '2018-04-30 00:00:00';select count(*) from aspnet_Xiaoshoutest where 销售时间 > '2018-04-30 00:00:00' and 销售时间 < '2018-05-07 00:00:00';select count(*) from aspnet_Xiaoshoutest where 销售时间 > '2018-05-07 00:00:00' and 销售时间 < '2018-05-14 00:00:00';select count(*) from aspnet_Xiaoshoutest where 销售时间 > '2018-05-14 00:00:00' and 销售时间 < '2018-05-21 00:00:00';select count(*) from aspnet_Xiaoshoutest where 销售时间 > '2018-05-21 00:00:00' and 销售时间 < '2018-05-28 00:00:00';select count(*) from aspnet_Xiaoshoutest where 销售时间 > '2018-05-28 00:00:00' and 销售时间 < '2018-06-04 00:00:00';select count(*) from aspnet_Xiaoshoutest where 销售时间 > '2018-06-04 00:00:00' and 销售时间 < '2018-06-11 00:00:00';select count(*) from aspnet_Xiaoshoutest where 销售时间 > '2018-06-11 00:00:00' and 销售时间 < '2018-06-18 00:00:00';select count(*) from aspnet_Xiaoshoutest where 销售时间 > '2018-06-18 00:00:00' and 销售时间 < '2018-06-25 00:00:00'", sqlcon);
             //使用ExecuteReader方法的返回值创建SqlDataReader对象
             SqlDataReader sqldr = sqlcmd.ExecuteReader();
             do
@@ -179,11 +179,22 @@ namespace System003
                 }
             }
             while (sqldr.NextResult() == false);
+            do
+            {
+                if (sqldr.HasRows)
+                {
+                    while (sqldr.Read())
+                    {
+                        manqpfl[14] = Convert.ToDouble(sqldr[0]);
+                    }
+                }
+            }
+            while (sqldr.NextResult() == false);
             if (sqldr.HasRows)
             {
                 while (sqldr.Read())
                 {
-                    manqpfl[14] = Convert.ToDouble(sqldr[0]);
+                    manqpfl[15] = Convert.ToDouble(sqldr[0]);
                 }
             }
             sqldr.Dispose();
@@ -196,11 +207,11 @@ namespace System003
 
             //初始化数据
 
-            double[] manqpfl0 = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15 };
+            double[] manqpfl0 = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15 , 16};
             //double[] manqpfl = { 25, 30, 7, 14, 41, 8, 18, 22, 24, 13, 7, 46, 11, 39, 17 };
             //double[] manqpfl1 = { 72, 71, 71, 72, 71, 72, 71, 72, 71, 72, 71, 72, 71, 72, 71 };
             //double[] manqpfl2 = { 60, 61, 60, 61, 60, 61, 60, 61, 60, 61, 60, 61, 60, 61, 62 };
-            int TotalMonths = 14;
+            int TotalMonths = 16;
 
 
 
