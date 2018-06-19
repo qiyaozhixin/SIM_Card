@@ -32,7 +32,7 @@ namespace System003
                 {
                     Response.Write("<script>window.alert('请输入员工OA!');location.href='Wodezhuce.aspx';</script>");
                 }
-                SqlCommand sqlcmd = new SqlCommand("insert into aspnet_Yuangongtest values('" + TextBox1.Text + "','" + TextBox3.Text + "','" + DropDownList1.Text + "','" + TextBox2.Text + "',null)", sqlcon);
+                SqlCommand sqlcmd = new SqlCommand("insert into aspnet_Yuangongtest values('" + TextBox1.Text + "','" + TextBox3.Text + "','" + DropDownList1.Text + "','" + TextBox2.Text + "')", sqlcon);
                 SqlDataReader sqldr = sqlcmd.ExecuteReader();
                 Response.Write("<script>window.alert('注册成功!');location.href='Default.aspx';</script>");
                 sqldr.Close();//关闭SqlDataReader对象

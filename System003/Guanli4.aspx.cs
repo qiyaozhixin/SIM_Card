@@ -56,7 +56,7 @@ namespace System003
             }
             else
             {
-                Response.Write("<script language=javascript>alert('删除失败！')</script>");
+                Response.Write("<script language=javascript>alert('删除失败,请先处理此卡在其他表上的记录！')</script>");
             }
         }
         /// <summary>

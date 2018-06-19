@@ -21,6 +21,7 @@
     </asp:GridView>
     <asp:Label ID="Label5" runat="server" Text="身份证号" Width="100px"></asp:Label>
     <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
+    <%--<asp:RangeValidator ID="RangeValidator1" runat="server" ControlToValidate="TextBox2" Type="Integer" MinimumValue="1" MaximumValue="9999" Display="Dynamic" ErrorMessage="身份证号输入错误!" ForeColor="Red"></asp:RangeValidator>--%>
     <br />
     <asp:Label ID="Label6" runat="server" Text="套餐类型" Width="100px"></asp:Label>
     <asp:DropDownList ID="DropDownList1" runat="server" AutoPostBack="True">
